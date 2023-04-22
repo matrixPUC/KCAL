@@ -4,7 +4,7 @@
     
 	$email = $mysqli->real_escape_string($_POST['txtEmail']); // prepara a string recebida para ser utilizada em comando SQL
     $senha = $mysqli->real_escape_string($_POST['txtSenha']); // prepara a string recebida para ser utilizada em comando SQL
-    
+
 
     // Faz Select na Base de Dados
     $sql = "SELECT * FROM usuario WHERE email = '$email'";

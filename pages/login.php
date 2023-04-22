@@ -12,15 +12,15 @@
 	<div class="container" id="container">
 		<div class="form-container log-in-container">
 			<form id="formLogin" name="formLogin" method="POST" action="./loginPHP.php">
-                <h1>KCal</h1>
+        <h1>KCal</h1>
 				<div class="social-container">
 					<a href="#" class="social"><i class="fa fa-facebook fa-2x"></i></a>
 					<a href="#" class="social"><i class="fab fa fa-twitter fa-2x"></i></a>
-                    <a href="#" class="social"><i class="fab fa fa-instagram fa-2x"></i></a>
+          <a href="#" class="social"><i class="fab fa fa-instagram fa-2x"></i></a>
 				</div>
 				<span>ou use sua conta</span>
 				<input type="email" id="txtEmail" name="txtEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required name = "Email" title= "Deve conter um @ " placeholder="Email" />
-				<input type="password" id="txtSenha" name="txtSenha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&*]).{6,10}"  required name="Senha" title="Deve conter pelo menos um número e uma letra maiúscula e minúscula e pelo menos 6 ou mais caracteres." placeholder="Senha"/>
+				<input type="password" id="txtSenha" name="txtSenha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&!*]).{6,10}"  required name="Senha" title="A senha deve ter de 6 a 10 caracteres e conter pelo menos um número, uma letra minúscula, uma letra maiúscula e um caractere especial" placeholder="Senha"/>
 				<a href="#">Esqueceu sua senha?</a>
 				<button>Entrar</button>
 
@@ -53,7 +53,7 @@
 			<div class="overlay">
 				<div class="overlay-panel overlay-right">
 					<p>Insira o seu Login e aproveite a rede social de nutrição!!</p>
-                    <img src="../assets/dieta.png">
+          <img src="../assets/dieta.png">
 				</div>
 			</div>
 		</div>

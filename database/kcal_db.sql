@@ -5,12 +5,14 @@ USE kcal_db;
 CREATE TABLE tipo_usuario(
   ID int(3) NOT NULL AUTO_INCREMENT,
   tipo varchar(20) NOT NULL,
-  administrador BOOLEAN NOT NULL
-) 
+  administrador BOOLEAN NOT NULL,
+
+  PRIMARY KEY(ID)
+);
 
 /*Criação da tabela de usuários*/
 CREATE TABLE usuario (
-  ID int(3) NOT NULL,
+  ID int(3) NOT NULL AUTO_INCREMENT,
   nome varchar(100) NOT NULL,
   dataNasc date DEFAULT NULL,
   peso float(3,2) DEFAULT NULL,
@@ -21,7 +23,7 @@ CREATE TABLE usuario (
 
   PRIMARY KEY(ID),
   FOREIGN KEY(tipo_usuario) REFERENCES tipo_usuario(ID)
-) 
+); 
 
 /*Criação da tabela de nutricionista*/
 CREATE TABLE nutricionista(
