@@ -26,7 +26,7 @@
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Comentários</a></li>
-                <li><a href="#" class="cadastro.php">Cadastre-se</a></li>
+                <li><a href="./pages/signup.php" class="cadastro.php">Cadastre-se</a></li>
               </ul>
             </div>
 

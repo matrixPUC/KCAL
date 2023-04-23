@@ -14,11 +14,11 @@
             $row = $result->fetch_assoc();
             $senhaBD = $row['senha'];
             if($senha == $senhaBD){
-                $_SESSION ['ID']           = $row['ID'];
-                $_SESSION ['tipo_usuario'] = $row['tipo_usuario'];
-                $_SESSION ['logado']       = 1;
+                $_SESSION['ID']           = $row['ID'];
+                $_SESSION['administrador'] = $row['administrador'];
+                $_SESSION['logado']       = 1;
                 
-                if($_SESSION['tipo_usuario'] == 1){           
+                if($_SESSION['administrador'] == 1){           
                     $mysqli->close();  //Encerra conexao com o BD
                     header('location: ./home_admin.php');  // Perfil Administrador
                     exit();

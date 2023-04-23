@@ -19,7 +19,7 @@
           <a href="#" class="social"><i class="fab fa fa-instagram fa-2x"></i></a>
 				</div>
 				<span>ou use sua conta</span>
-				<input type="email" id="txtEmail" name="txtEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required name = "Email" title= "Deve conter um @ " placeholder="Email" />
+				<input type="email" id="txtEmail" name="txtEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required name = "Email" title="Deve conter um @" placeholder="Email" />
 				<input type="password" id="txtSenha" name="txtSenha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&!*]).{6,10}"  required name="Senha" title="A senha deve ter de 6 a 10 caracteres e conter pelo menos um número, uma letra minúscula, uma letra maiúscula e um caractere especial" placeholder="Senha"/>
 				<a href="#">Esqueceu sua senha?</a>
 				<button>Entrar</button>

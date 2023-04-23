@@ -9,5 +9,6 @@
 <body>
     <h1> HOME ADMIN</h1>
     <a href="./logout.php">LogOut</a>
+    <a href="./profile.php">Perfil</a>
 </body>
 </html>

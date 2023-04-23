@@ -8,6 +8,8 @@
 </head>
 <body>
     <h1> HOME </h1>
+    <a href="./profile.php">Perfil</a>
+    <br>
     <a href="./logout.php">LogOut</a>
 </body>
 </html>
