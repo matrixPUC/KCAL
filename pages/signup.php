@@ -39,11 +39,23 @@
 
                     <div class="input-box">
                         <label for="nasc">Data de Nascimento</label>
-                        <input id="birth" type="date" name="nascimento" placeholder="Digite sua data de nascimento" required pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/([0-9]{4})$" title="Insira uma data de nascimento válida">
+                        <input id="birth" type="date" name="nascimento" placeholder="Digite sua data de nascimento" required pattern=(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" title="Número de telefone precisa ser no formato (99) 9999-9999" >
                     </div>
 
                     <div class="input-box">
+                        <label for="phone">Celular</label>
+                        <input id="phone" type="phone" name="phone" placeholder="Digite seu celular" required pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/([0-9]{4})$" title="Insira uma data de nascimento válida">
+                    </div>
+
+
+
+                    <div class="input-box">
                         <label for="senha">Senha</label>
+                        <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&!*]).{6,10}" title="A senha deve ter de 6 a 10 caracteres e conter pelo menos um número, uma letra minúscula, uma letra maiúscula e um caractere especial">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="senha">Confirmar senha</label>
                         <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&!*]).{6,10}" title="A senha deve ter de 6 a 10 caracteres e conter pelo menos um número, uma letra minúscula, uma letra maiúscula e um caractere especial">
                     </div>
                     

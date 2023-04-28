@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+
 
 * {
 	box-sizing: border-box;
@@ -45,12 +47,12 @@ button {
 	border: 1px solid #2bff8a;
 	background-color: #2bff8a ;
 	color: #FFFFFF;
-	font-size: 12px;
-	font-weight: bold;
+	font-size: 14px;
+	font-family: 'Inter', sans-serif;
 	padding: 12px 45px;
 	letter-spacing: 1px;
-	text-transform: uppercase;
 	transition: transform 80ms ease-in;
+	cursor: pointer;
 }
 
 form {

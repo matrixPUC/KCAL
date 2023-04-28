@@ -12,13 +12,13 @@
   <body>
     <main>
       <div class="big-wrapper light">
-        <img src="./img/shape.png" alt="" class="shape" />
+        
 
         <header>
           <div class="container">
             <div class="logo">
               <img src="./assets/nutricionista.png" alt="Logo" />
-              <h3>KCal</h3>
+              <h3>KCAL</h3>
             </div>
 
             <div class="links">
@@ -53,7 +53,7 @@
             </div>
 
             <div class="right">
-              <img src="./assets/pessoa.png" alt="Person Image" class="person" />
+              <img src="./assets/landing page.svg" alt="Person Image" class="person" />
             </div>
           </div>
         </div>
