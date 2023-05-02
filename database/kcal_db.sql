@@ -34,8 +34,19 @@ CREATE TABLE nutricionista(
   FOREIGN KEY(ID) REFERENCES USUARIO(ID)
 );
 
+CREATE TABLE ingrediente(
+  ID int(3) NOT NULL AUTO_INCREMENT,
+  nome varchar(100) NOT NULL,
+  calorias INT NOT NULL,
+  quantidadePadrao FLOAT NOT NULL,
+  porcao varchar(50) NOT NULL
+)
+
 INSERT INTO tipo_usuario(tipo, administrador) VALUES ('kcaller', false);
 INSERT INTO tipo_usuario(tipo, administrador) VALUES ('nutricionista', false);
 INSERT INTO tipo_usuario(tipo, administrador) VALUES ('administrador', true);
 
 INSERT INTO usuario(nome, dataNasc, peso, altura, email, senha, tipo_usuario) VALUES('joao', '2023-04-23', 100.0, 190.0, 'joao@gmail.com', 'Abc123!', 1);
+
+INSERT INTO ingrediente(nome, calorias, quantidadePadrao, porcao) VALUES ('Farinha', 364, 100, 'gramas');
+INSERT INTO ingrediente(nome, calorias, quantidadePadrao, porcao) VALUES ('Ovo', 82, 1, 'unidade');
