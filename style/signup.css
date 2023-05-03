@@ -169,6 +169,10 @@ body {
     color: #fff;
 }
 
+.hidden {
+    display: none;
+}
+
 @media screen and (max-width: 1330px) {
     .form-image {
         display: none;

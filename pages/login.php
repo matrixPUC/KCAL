@@ -39,6 +39,10 @@
 								<p>Email ou Senha Incorretos</p>
 								<?php
 								break;
+							case 3:?>
+								<p>Conta ainda não validada</p>
+								<?php
+								break;
 						}
 						
 					}else{?>

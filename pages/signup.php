@@ -39,32 +39,29 @@
 
                     <div class="input-box">
                         <label for="nasc">Data de Nascimento</label>
-                        <input id="birth" type="date" name="nascimento" placeholder="Digite sua data de nascimento" required pattern=(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" title="Número de telefone precisa ser no formato (99) 9999-9999" >
+                        <input id="nascimento" type="date" name="nascimento" placeholder="Digite sua data de nascimento" required pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})(?<=\s)(?!20[3-9][0-9]|2[1-9][0-9]{2})" title="Número de telefone precisa ser no formato (99) 9999-9999" >
                     </div>
 
-                    <div class="input-box">
-                        <label for="phone">Celular</label>
-                        <input id="phone" type="phone" name="phone" placeholder="Digite seu celular" required pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/([0-9]{4})$" title="Insira uma data de nascimento válida">
-                    </div>
-
-
-
+                    
                     <div class="input-box">
                         <label for="senha">Senha</label>
                         <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&!*]).{6,10}" title="A senha deve ter de 6 a 10 caracteres e conter pelo menos um número, uma letra minúscula, uma letra maiúscula e um caractere especial">
                     </div>
-
+                    
                     <div class="input-box">
                         <label for="senha">Confirmar senha</label>
-                        <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&!*]).{6,10}" title="A senha deve ter de 6 a 10 caracteres e conter pelo menos um número, uma letra minúscula, uma letra maiúscula e um caractere especial">
+                        <input id="confirmar-senha" type="password" name="confirmar-senha" placeholder="Confirme sua senha" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&!*]).{6,10}" title="A senha deve ter de 6 a 10 caracteres e conter pelo menos um número, uma letra minúscula, uma letra maiúscula e um caractere especial">
                     </div>
                     
+                    <div class="input-box">
+                        <label for="phone">Celular</label>
+                        <input id="celular" type="phone" name="celular" placeholder="Digite seu celular" required pattern="^-?[0-9]+$" title="Insira um celular válido">
+                    </div>
+
                     <div class="input-box">
                         <label for="peso">Peso</label>
                         <input id="peso" type="text" name="peso" placeholder="kg" required pattern="^(?:(?:(?:[0-4]?\d{1,2})|500)(?:[.,]\d{1,2})?|\d{1,3})$" title="Insira um peso válido com até no maximo duas casas decimais">
                     </div>
-
-                    
 
                     <div class="input-box">
                         <label for="altura">Altura</label>
@@ -84,7 +81,7 @@
                             <label for="nutricionista">Nutricionista</label>
                         </div>
                     <div id="campo" style="display:none;">
-                            <input type="text" id="input-box" name="crn" placeholder="CRN: XX-">
+                            <input type="text" id="input-box" name="crn" placeholder="CRN" pattern="^[A-Z]{2}[0-9]{5}$" title="Insira um CRN válido">
                             <label for="input-campo"></label>
                             
                     </div>
@@ -99,7 +96,7 @@
                 </div>
 
                 <div class="continue-button">
-                    <button><a href="#">Cadastrar</a> </button>
+                    <button>Cadastrar</button>
                 </div>
                 <?php
 					//Conexão com o banco
@@ -114,6 +111,10 @@
 								break;
                             case 2:?>
                                 <p>Este email já possui uma conta</p>
+                                <?php
+                                break;
+                            case 3:?>
+                                <p>As senhas estão diferentes</p>
                                 <?php
                                 break;
 						}

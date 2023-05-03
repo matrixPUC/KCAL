@@ -15,17 +15,23 @@
             $senhaBD = $row['senha'];
             if($senha == $senhaBD){
                 $_SESSION['ID']           = $row['ID'];
-                $_SESSION['administrador'] = $row['administrador'];
+                $_SESSION['nome']           = $row['nome'];
                 $_SESSION['logado']       = 1;
                 
-                if($_SESSION['administrador'] == 1){           
+                if($row['tipo_usuario'] == 3){  
                     $mysqli->close();  //Encerra conexao com o BD
-                    header('location: ./home_admin.php');  // Perfil Administrador
+                    header('location: ./login.php?error=1');  //Nao existe cadastro com este email na base                
                     exit();
-                }else{  
-                    $mysqli->close();  //Encerra conexao com o BD                               
-                    header('location: ./home.php');  // Perfil Kcaller
-                    exit();
+                } else { 
+                    if ($row['validado'] == 1) {
+                        $mysqli->close();  //Encerra conexao com o BD                               
+                        header('location: ./home.php');  // Perfil Kcaller
+                        exit();
+                    } else {
+                        $mysqli->close();  //Encerra conexao com o BD                               
+                        header('location: ./login.php?error=3');  // Perfil Kcaller
+                        exit();
+                    }
                 }
             }else{
                 $_SESSION['logado']  = 0;

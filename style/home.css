@@ -1,0 +1,385 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+  }
+  
+  ul, li{
+    list-style: none;
+  }
+  body{
+    font-family:Tahoma, Verdana, Arial, Sans-serif;
+    background: FFF3E2 ;
+    padding-bottom:100px;
+  }
+  button, input{
+    outline: none;
+  }
+  .content{
+    margin:0 auto;
+    padding: 0 20px
+  }
+
+  /*Main Header*/
+  header#main-header{
+    color: #a7aaaf;
+    height: 60px;
+    background: #9fddb3;
+    border-bottom: 1px solid  #2bff8a; 
+    margin-bottom: 20px;
+  
+  } 
+  
+  
+  header#main-header div.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  header#main-header div.content div.logo{
+    display: flex;
+    align-items: center;
+  }
+  
+  header#main-header div.content div.logo img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  header#main-header div.content div.logo input{
+  
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding-left:35px; 
+    height: 40px;
+    width: 220px;
+    border-radius: 50px;
+    background: #2bff8a url(./assets/search.svg)  no-repeat 10px center;
+  }
+  header#main-header div.content nav.menu-icons {
+    display: flex;
+    align-items: center;
+  
+  }
+  header#main-header div.content nav.menu-icons div{
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin: 5px;
+    justify-content: center;
+    height: 45px;
+    width: 100px;
+    transition: background 0.2s;
+    position: relative;
+  }
+  header#main-header div.content nav.menu-icons div:hover{
+    background: #3a3b3c;
+  }
+  header#main-header div.content nav.menu-icons div.home{
+    height: 60px;
+    margin:0
+  
+  }
+  header#main-header div.content nav.menu-icons div.home::after{
+    content:'';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: #2bff8a;
+  }
+  
+  header#main-header div.content nav.menu-icons div span.select {
+    color:#2bff8a;
+  }
+  
+  
+  
+  
+  header#main-header div.content div.user {
+    display: flex;
+  }
+  header#main-header div.content div.user > div{
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+  }
+  header#main-header div.content div.user > div span{
+    font-size: 15px;
+    font-weight: bolder;
+  
+  }
+  
+  
+  header#main-header div.content div.user img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  header#main-header div.content div.user nav.actions{
+    display: flex;
+    align-items: center;
+  }
+  
+  header#main-header div.content div.user nav.actions div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #3a3b3c;
+  }
+  header#main-header div.content div.user nav.actions div:last-child{
+    margin-right: 0;
+  }
+  header#main-header div.content div.user nav.actions div span{
+   font-size: 20px;
+  }
+  
+  
+  /*aisde Nav Icons */
+  div.wrapper-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  div.wrapper-content aside.nav-icons{
+    width: 270px;
+  
+  }
+  div.wrapper-content aside.nav-icons ul li{
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+  }
+  
+  div.wrapper-content aside.nav-icons ul li:first-child{
+    margin-top: 0
+  }
+  
+  div.wrapper-content aside.nav-icons ul li img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px ;
+  }
+  div.wrapper-content aside.nav-icons ul li span{
+    font-size: 30px;
+    color:#2bff8a;
+    margin-right: 10px;
+  
+  }
+  div.wrapper-content aside.nav-icons ul li strong{
+    font-size: 16px;
+    color: #a7aaaf;
+  }
+  div.wrapper-content aside.nav-icons button{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color:#3a3b3c;
+    font-size: 15px;
+    font-weight: bold;
+    color:#a7aaaf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  div.wrapper-content aside.nav-icons button:hover{
+    background:  #4b4d4e;
+  }
+  
+  
+  /* Section Feed*/
+  div.wrapper-content section.feed{
+    width: 540px;
+  
+  }
+  div.wrapper-content section.feed div.stories{
+    display: flex;
+  }
+  
+  div.wrapper-content section.feed div.stories div{
+    height: 200px;
+    padding: 10px;
+    width: 112px;
+    background: #bec0c5;
+    border-radius: 10px;
+    margin-right: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url() no-repeat;
+    background-position:left;
+    background-size: cover;
+  }
+  div.wrapper-content section.feed div.stories div:last-child{
+    margin-right: 0;
+  }
+  
+  div.wrapper-content section.feed div.stories div img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid  #2bff8a;
+  }
+  
+  div.wrapper-content section.feed div.stories div strong{
+   font-size: 15px;
+   color: #fff;
+  }
+  
+  
+  /*Feed*/
+  
+  div.wrapper-content section.feed main ul li {
+    margin-top:20px;
+    border-radius: 10px;
+    background: #242526;
+  }
+  
+  div.wrapper-content section.feed main ul li div.user-info{
+    padding:15px 10px;
+  }
+  
+  div.wrapper-content section.feed main ul li div.user-info div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+  div.wrapper-content section.feed main ul li div.user-info div div {
+    display: flex;
+    align-items: center;
+  }
+  div.wrapper-content section.feed main ul li div.user-info div div div{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+  }
+  
+  div.wrapper-content section.feed main ul li div.user-info div div div strong{
+    font-size: 15px;
+    color: #e4e6eb;
+  }
+  
+  div.wrapper-content section.feed main ul li div.user-info div div div p{
+    display: flex;
+    align-items: center;
+    color: #e4e6eb;
+    font-size: 10px;
+  }
+  
+  div.wrapper-content section.feed main ul li div.user-info div div div p span{
+    font-size: 15px;
+    margin-left: 5px;
+  }
+  div.wrapper-content section.feed main ul li div.user-info div img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right:8px;
+  
+  }
+  
+  div.wrapper-content section.feed main ul li div.user-info div span{
+    color: #e4e6eb;
+  }
+  div.wrapper-content section.feed main ul li div.user-info > p{
+    margin-top: 10px ;
+    color: #e4e6eb;
+  }
+  
+  div.wrapper-content section.feed main ul li div.image-feed {
+    width: 100%;
+    height: 500px;
+    background:url(https://www.sabornamesa.com.br/media/k2/items/cache/668fe285e7b87ea59a0ba9aff307fa0b_XL.jpg) no-repeat;
+    background-position: center right;
+    background-size:cover ;
+  }
+
+  a {
+    text-decoration: none;
+    color: grey;
+  }
+  
+  
+  
+  
+  
+  
+  div.wrapper-content section.feed main ul li div.actions-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+  }
+  
+  div.wrapper-content section.feed main ul li div.actions-user div{
+    color:#e4e6eb;
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    font-size: 14px;
+  }
+  
+  div.wrapper-content section.feed main ul li div.actions-user div:last-child{
+    margin-right: 0px;
+  }
+  
+  div.wrapper-content section.feed main ul li div.actions-user div span{
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  
+  /* Aside Contatos*/
+  div.wrapper-content aside.contacts{
+    width: 306px;
+  
+  }
+  div.wrapper-content aside.contacts div.search{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  
+  }
+  
+  div.wrapper-content aside.contacts div.search  div.icons-search span{
+    color:#a7aaaf;
+    font-size: 25px;
+    margin-left: 10px;
+  }
+  div.wrapper-content aside.contacts strong{
+    font-size: 16px;
+    color:#a7aaaf;
+  }
+  
+  div.wrapper-content aside.contacts ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  div.wrapper-content aside.contacts ul li img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  div.wrapper-content aside.contacts ul li span{
+    font-weight: bold;
+    font-size: 14px;
+    color: #e4e6eb;
+  }
