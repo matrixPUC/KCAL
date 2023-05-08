@@ -254,7 +254,7 @@ div.wrapper-content section.feed main ul li div.user-info{
 
 div.wrapper-content section.feed main ul li div.user-info div{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 div.wrapper-content section.feed main ul li div.user-info div div {
@@ -347,7 +347,6 @@ div.wrapper-content aside.contacts div.search{
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-
 }
 
 div.wrapper-content aside.contacts div.search  div.icons-search span{
@@ -376,3 +375,43 @@ div.wrapper-content aside.contacts ul li span{
   font-size: 14px;
   color: var(--cinza01);
 }
+
+ /* Section Feed*/
+ div.wrapper-content section.feed{
+  width: 540px;
+
+}
+div.wrapper-content section.feed div.stories{
+  display: flex;
+}
+
+div.wrapper-content section.feed div.stories div{
+  height: 200px;
+  padding: 10px;
+  width: 112px;
+  background: #bec0c5;
+  border-radius: 10px;
+  margin-right: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url() no-repeat;
+  background-position:left;
+  background-size: cover;
+}
+div.wrapper-content section.feed div.stories div:last-child{
+  margin-right: 0;
+}
+
+div.wrapper-content section.feed div.stories div img{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 3px solid  var(--verde02);
+}
+
+div.wrapper-content section.feed div.stories div strong{
+ font-size: 15px;
+ color: #fff;
+}
+
