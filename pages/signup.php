@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <div class="form-image">
-            <img src="../assets/imagem cadastro.png" alt="">
+            <img src="../assets/sign up.svg" alt="">
         </div>
         <div class="form">
             <form id="formSignup" name="formSignup" method="POST" action="./signupPHP.php">
@@ -42,6 +42,11 @@
                         <input id="nascimento" type="date" name="nascimento" placeholder="Digite sua data de nascimento" required pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})(?<=\s)(?!20[3-9][0-9]|2[1-9][0-9]{2})" title="Número de telefone precisa ser no formato (99) 9999-9999" >
                     </div>
 
+                    <div class="input-box">
+                        <label for="phone">Celular</label>
+                        <input id="celular" type="phone" name="celular" placeholder="Digite seu celular" required pattern="^-?[0-9]+$" title="Insira um celular válido">
+                    </div>
+
                     
                     <div class="input-box">
                         <label for="senha">Senha</label>
@@ -53,10 +58,7 @@
                         <input id="confirmar-senha" type="password" name="confirmar-senha" placeholder="Confirme sua senha" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&!*]).{6,10}" title="A senha deve ter de 6 a 10 caracteres e conter pelo menos um número, uma letra minúscula, uma letra maiúscula e um caractere especial">
                     </div>
                     
-                    <div class="input-box">
-                        <label for="phone">Celular</label>
-                        <input id="celular" type="phone" name="celular" placeholder="Digite seu celular" required pattern="^-?[0-9]+$" title="Insira um celular válido">
-                    </div>
+                    
 
                     <div class="input-box">
                         <label for="peso">Peso</label>

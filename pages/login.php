@@ -57,7 +57,7 @@
 			<div class="overlay">
 				<div class="overlay-panel overlay-right">
 					<p>Insira o seu Login e aproveite a rede social de nutrição!!</p>
-          <img src="../assets/dieta.png">
+          <img src="../assets/login.svg">
 				</div>
 			</div>
 		</div>

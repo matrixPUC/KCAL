@@ -3,7 +3,7 @@
     $usuario = 'root';
     $senha = '';
     $database = 'kcal_db';
-    $host = 'localhost:3307';
+    $host = 'localhost:3306';
 
     $mysqli = new mysqli($host, $usuario, $senha, $database);
 

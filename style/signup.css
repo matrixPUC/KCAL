@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
 
 :root {
-    --verde00: #c2ebcf;
+    --verde00: hsl(139, 45%, 86%);
     --verde01: #9fddb3;
     --verde02: #42f392;
     --cinza08: #eeeeee75;
