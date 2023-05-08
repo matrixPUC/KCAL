@@ -1,13 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
 
+:root {
+	--verde01: #9fddb3;
+    --verde02: #2bff8a;
+    --verde03: #41ff8a;
+	--verde04: #2bffae;
+    --preto01: #00000040;
+    --preto02: #00000038;
+    --cinza00: #DDDDDD;
+}
 
 * {
 	box-sizing: border-box;
 }
 
 body {
-	background: #9fddb3;
+	background: var(--verde01);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -44,8 +53,8 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #2bff8a;
-	background-color: #2bff8a ;
+	border: 1px solid var(--verde02);
+	background-color: var(--verde02) ;
 	color: #FFFFFF;
 	font-size: 14px;
 	font-family: 'Inter', sans-serif;
@@ -77,7 +86,7 @@ input {
 .container {
 	background-color: #fff;
 	border-radius: 10px;
-  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  	box-shadow: 0 14px 28px var(--preto01), 0 10px 10px var(--preto02);
 	position: relative;
 	overflow: hidden;
 	width: 768px;
@@ -108,9 +117,9 @@ input {
 
 
 .overlay {
-	background: #41ff8a;
-	background: -webkit-linear-gradient(to right, #2bffae, #2bff8a);
-	background: linear-gradient(to right,#2bffae, #2bff8a );
+	background: var(--verde03);
+	background: -webkit-linear-gradient(to right, var(--verde04), var(--verde02));
+	background: linear-gradient(to right, var(--verde04), var(--verde02));
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -145,7 +154,7 @@ input {
 }
 
 .social-container a {
-	border: 1px solid #DDDDDD;
+	border: 1px solid var(--cinza00);
 	border-radius: 50%;
 	display: inline-flex;
 	justify-content: center;

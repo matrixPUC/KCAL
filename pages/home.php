@@ -6,7 +6,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -29,7 +29,7 @@
         <div class="home">
           <span class="material-icons">
             <a href = "./home.php"> 
-              <img src="" alt="home" id="home">
+              home
             </a>    
           </span>
         </div>
@@ -84,7 +84,7 @@
       <ul>
 
         <li>
-          <img src="../assets/douglas.png" alt="">
+          <img src="../assets/pessoa.png" alt="">
           <?php 
             echo '<strong><a href="./perfil.php">' . $nome_sessao . '</a></strong>'
           ?>
@@ -134,7 +134,6 @@
             //Match no SQL para obter as publicações em ordem de data descendente de perfis que o usuário segue
             $sql = "SELECT * FROM receita
                     WHERE public = true";
-
             $result = $mysqli->query($sql);
             $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
@@ -145,7 +144,7 @@
                 <div class='user-info'>
                   <div>
                     <div>
-                      <img src='./assets/douglas.png' alt=''>
+                      <img src='./assets/pessoa.png' alt=''>
                       <div>
                         <strong>" . $row["ID_usuario"] . "</strong>
                         <p>4 h
