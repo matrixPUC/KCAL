@@ -2,7 +2,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
 <div align="center">
-  ![kcal-logo](https://github.com/matrixPUC/KCAL/assets/91105011/fe27f526-255d-4598-984a-7b068b85033a)
+  ![image](https://github.com/matrixPUC/KCAL/assets/91105011/6b603b4f-c2ac-43a8-ad82-a4f162836daf)
+
  <br>
   Com a crescente preocupação das pessoas com sua saúde e bem-estar, muitos indivíduos estão buscando informações sobre dieta e nutrição na internet, apresentando dificuldade ao encontrar receitas específicas e organizar dieta. No entanto, encontrar informações confiáveis e relevantes pode ser um desafio, especialmente em meio a tantas fontes conflitantes. 
 Nesse contexto, uma rede social para pessoas interessadas em informações e troca de experiências alimentares é fundamental para preencher essa lacuna, fornecendo aos usuários um espaço seguro e confiável para compartilhar informações.  A plataforma KCAL, oferece uma variedade de recursos, como um sistema que calcula   as calorias de alimentos, dietas e receitas, controle de refeições feitas no dia a dia, troca de experiências gastronômicas e compartilhamento de receitas. 
