@@ -26,7 +26,7 @@ Com esse suporte e recursos a KCAL pode se tornar uma plataforma valiosa para qu
 ![Product Backlog Building](https://github.com/matrixPUC/KCAL/assets/91105011/1c682e5b-8bdd-4b8a-ad92-7762a017294d)
 <br>     
  ## Personas
-  Kcaller <br> 👩🏽
+  Kcaller 👩 <br> 
   Nutricionista 👩🏽‍🏫 <br>
   Administrador 👩🏽‍💻 <br>
   
