@@ -12,11 +12,17 @@ Nesse contexto, uma rede social para pessoas interessadas em informações e tro
 Além disso, uma rede social voltada ao bem-estar pode promover a comunidade e apoio mútuo entre os usuários, criando um ambiente encorajador para a adesão de hábitos saudáveis e para conquista de meta de saúde e bem-estar.
 Com esse suporte e recursos a KCAL pode se tornar uma plataforma valiosa para quem busca um estilo de vida saudável com informações confiáveis.
   
-</div> 
+
 
 ## 3 objetivos 
 
-<iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVMbAKc0w=/?moveToViewport=-706,-397,1457,700&embedId=509684890959" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
+
+![beneficios-kcal](https://github.com/matrixPUC/KCAL/assets/91105011/a6901a2f-bf05-41f7-99b9-22810e3efdf8)
 
  
+ ##PBL-Product Backlog Building 
+  O objetivo do PBB é criar um Product Backlog claro e conciso que oriente o desenvolvimento do produto, permitindo que a equipe de desenvolvimento trabalhe de forma mais eficiente e priorize as entregas de acordo com o valor que elas proporcionam para o usuário final e para o negócio.
+
+![Product Backlog Building](https://github.com/matrixPUC/KCAL/assets/91105011/1c682e5b-8bdd-4b8a-ad92-7762a017294d)
   
+  </div>
