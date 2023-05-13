@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
 <div align="center">
-  ![image](https://github.com/matrixPUC/KCAL/assets/91105011/6b603b4f-c2ac-43a8-ad82-a4f162836daf)
+  
 
  <br>
   Com a crescente preocupação das pessoas com sua saúde e bem-estar, muitos indivíduos estão buscando informações sobre dieta e nutrição na internet, apresentando dificuldade ao encontrar receitas específicas e organizar dieta. No entanto, encontrar informações confiáveis e relevantes pode ser um desafio, especialmente em meio a tantas fontes conflitantes. 
@@ -12,7 +12,7 @@ Com esse suporte e recursos a KCAL pode se tornar uma plataforma valiosa para qu
   
 </div> 
 
-##3 objetivos 
+## 3 objetivos 
 
  
   
