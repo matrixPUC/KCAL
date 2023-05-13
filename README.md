@@ -2,9 +2,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
 <div align="center">
-  ![kcal-logo](https://github.com/matrixPUC/KCAL/assets/91105011/b0bb0237-aee6-4c72-8e8f-f01a6da42743)
 
   
+![kcal-logo](https://github.com/matrixPUC/KCAL/assets/91105011/8ea88046-2591-4e74-a6c5-6799a4b1502f)
 
  <br>
   Com a crescente preocupação das pessoas com sua saúde e bem-estar, muitos indivíduos estão buscando informações sobre dieta e nutrição na internet, apresentando dificuldade ao encontrar receitas específicas e organizar dieta. No entanto, encontrar informações confiáveis e relevantes pode ser um desafio, especialmente em meio a tantas fontes conflitantes. 
