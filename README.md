@@ -1,5 +1,6 @@
 # KCAL 🍏 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+![image](https://github.com/matrixPUC/KCAL/assets/91105011/713802cb-4076-4a09-8417-9487aa297fd5)
 
 <div align="center">
   
