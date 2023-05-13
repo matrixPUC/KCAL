@@ -2,6 +2,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
 <div align="center">
+  ![kcal-logo](https://github.com/matrixPUC/KCAL/assets/91105011/b0bb0237-aee6-4c72-8e8f-f01a6da42743)
+
   
 
  <br>
