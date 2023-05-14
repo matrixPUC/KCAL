@@ -26,7 +26,7 @@
 <body>
     <div class="container">
         <div class="form-image">
-            <img src="../assets/sign up.svg" alt="">
+            <img src="../assets/editar.svg" alt="edit">
         </div>
         <div class="form">
             <form id="formEdit" name="formEdit" method="POST" action="./editPHP.php">
