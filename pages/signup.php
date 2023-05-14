@@ -39,7 +39,7 @@
 
                     <div class="input-box">
                         <label for="nasc">Data de Nascimento</label>
-                        <input id="nascimento" type="date" name="nascimento" placeholder="Digite sua data de nascimento" required pattern="^(19[0-9]{2}|20[0-2][0-2])-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$" title="Insira uma data de nascimento válida" >
+                        <input id="nascimento" type="date" name="nascimento" placeholder="Digite sua data de nascimento" required >
                     </div>
 
                     <div class="input-box">
@@ -115,6 +115,10 @@
                                 break;
                             case 3:?>
                                 <p>As senhas estão diferentes</p>
+                                <?php
+                                break;
+                            case 4:?>
+                                <p>Essa data de nascimento é inválida</p>
                                 <?php
                                 break;
 						}

@@ -13,6 +13,13 @@
   $celular = $mysqli->real_escape_string($_POST['celular']); // prepara a string recebida para ser utilizada em comando SQL
   $crn = $mysqli->real_escape_string($_POST['crn']); // prepara a string recebida para ser utilizada em comando SQL
 
+  $anoNascimento = intval(substr($nascimento, 0, 4));
+
+  if ($anoNascimento > 2023) {
+      header('location: ./signup.php?error=4');
+      return;
+  }
+
   if ($senha !== $confirmarSenha) {
     header('location: ./signup.php?error=3');
     return;
