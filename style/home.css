@@ -92,6 +92,7 @@ div.wrapper-content aside.nav-icons button:hover{
 /* Section Feed*/
 div.wrapper-content section.feed{
   width: 540px;
+  margin-right: 350px;
 }
 div.wrapper-content section.feed div.stories{
   display: flex;
