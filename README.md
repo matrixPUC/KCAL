@@ -20,7 +20,7 @@ Com esse suporte e recursos a KCAL pode se tornar uma plataforma valiosa para qu
 ![beneficios-kcal](https://github.com/matrixPUC/KCAL/assets/91105011/a6901a2f-bf05-41f7-99b9-22810e3efdf8)
 
  
- ## PBL-Product Backlog Building 
+ ## PBB-Product Backlog Building 
   O objetivo do PBB é criar um Product Backlog claro e conciso que oriente o desenvolvimento do produto, permitindo que a equipe de desenvolvimento trabalhe de forma mais eficiente e priorize as entregas de acordo com o valor que elas proporcionam para o usuário final e para o negócio.
 
 ![Product Backlog Building](https://github.com/matrixPUC/KCAL/assets/91105011/1c682e5b-8bdd-4b8a-ad92-7762a017294d)
