@@ -9,6 +9,6 @@
 
   $result = $mysqli->query($sql);
   
-  header('location: ./profile.php');
+  header('location: ./perfil.php');
 
 ?>

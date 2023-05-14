@@ -168,3 +168,26 @@ img {
 	max-width: 70%;
 	max-height: 70%;
    }
+
+/* Style for small screens */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .form-container, .overlay-container {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .overlay {
+    display: none;
+  }
+  
+  input {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+

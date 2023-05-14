@@ -202,6 +202,7 @@ div.wrapper-content aside.nav-icons button:hover{
 }
 
 
+
 /* Section Feed*/
 div.wrapper-content section.feed{
   width: 540px;
@@ -376,3 +377,6 @@ div.wrapper-content aside.contacts ul li span{
   font-size: 14px;
   color: var(--cinza01);
 }
+
+
+
