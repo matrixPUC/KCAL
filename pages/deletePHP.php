@@ -4,9 +4,11 @@
 
   $ID = $_SESSION['ID'];
 
-  $sql = "DELETE FROM nutricionista WHERE ID = '$ID'";
-
-  $result = $mysqli->query($sql);
+  try {
+    $sql = "DELETE FROM nutricionista WHERE ID_usuario = '$ID'";
+  
+    $result = $mysqli->query($sql);
+  } catch (Exception $e){};
 
   $sql = "DELETE FROM usuario WHERE ID = '$ID'";
 
