@@ -71,7 +71,7 @@
                 </li>
                 <li>
                     <span class="material-icons">123</span>
-                    <strong><a href="./edit.php">Editar peso</a></strong>
+                    <strong><a href="./edit.php">Editar conta</a></strong>
                 </li>
                 <li>
                     <span class="material-icons">delete</span>

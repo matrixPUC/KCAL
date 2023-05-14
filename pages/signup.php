@@ -39,7 +39,7 @@
 
                     <div class="input-box">
                         <label for="nasc">Data de Nascimento</label>
-                        <input id="nascimento" type="date" name="nascimento" placeholder="Digite sua data de nascimento" required pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})(?<=\s)(?!20[3-9][0-9]|2[1-9][0-9]{2})" title="Número de telefone precisa ser no formato (99) 9999-9999" >
+                        <input id="nascimento" type="date" name="nascimento" placeholder="Digite sua data de nascimento" required pattern="^(19[0-9]{2}|20[0-2][0-2])-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$" title="Insira uma data de nascimento válida" >
                     </div>
 
                     <div class="input-box">
@@ -57,8 +57,6 @@
                         <label for="senha">Confirmar senha</label>
                         <input id="confirmar-senha" type="password" name="confirmar-senha" placeholder="Confirme sua senha" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&!*]).{6,10}" title="A senha deve ter de 6 a 10 caracteres e conter pelo menos um número, uma letra minúscula, uma letra maiúscula e um caractere especial">
                     </div>
-                    
-                    
 
                     <div class="input-box">
                         <label for="peso">Peso</label>
