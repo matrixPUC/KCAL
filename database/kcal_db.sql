@@ -58,12 +58,10 @@ CREATE TABLE receita(
   FOREIGN KEY(ID_usuario) REFERENCES usuario(ID)
 );
 
-create table receita_ingrediente(
+CREATE TABLE receita_ingrediente(
   ID_receita int NOT NULL,
   ID_ingrediente int NOT NULL,
   quantidade FLOAT NOT NULL,
-    
-  FOREIGN KEY(ID_receita) REFERENCES receita(ID),
   FOREIGN KEY(ID_ingrediente) REFERENCES ingrediente(ID)
 );
 
@@ -75,11 +73,11 @@ INSERT INTO tipo_usuario(tipo) VALUES
 ('administrador');
 
 INSERT INTO usuario(nome, dataNasc, peso, altura, email, senha, celular, tipo_usuario, validado) VALUES
-('joao', '2023-04-23', 100.0, 190.0, 'joao@gmail.com', 'Abc123!', '41999990000', 1, 1),
-('adm😎', '2023-04-23', 100.0, 190.0, 'adm@gmail.com', 'Abc123!', '30305050', 3, 1),
-('lohine', '2000-04-23', 60.0, 160.0, 'lohine@gmail.com', 'Abc123!', '41999990000', 1, 1),
-('bruno', '2003-04-23', 90.0, 175.0, 'bruno@gmail.com', 'Abc123!', '41999990000', 2, 1),
-('beatriz', '1997-10-20', 65.0, 151.0, 'beatriz@gmail.com', 'Abc@123', '41999943781', 2, 1);
+('João', '2023-04-23', 100.0, 190.0, 'joao@gmail.com', 'Abc123!', '41999990000', 1, 1),
+('Administrador', '2023-04-23', 100.0, 190.0, 'adm@gmail.com', 'Abc123!', '30305050', 3, 1),
+('Lohine', '2000-04-23', 60.0, 160.0, 'lohine@gmail.com', 'Abc123!', '41999990000', 1, 1),
+('Bruno', '2003-04-23', 90.0, 175.0, 'bruno@gmail.com', 'Abc123!', '41999990000', 2, 1),
+('Beatriz', '1997-10-20', 65.0, 151.0, 'beatriz@gmail.com', 'Abc@123', '41999943781', 2, 1);
 
 INSERT INTO nutricionista(ID_usuario, crn) VALUES
 (3, 'PR12345'),
