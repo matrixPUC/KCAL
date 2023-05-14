@@ -37,7 +37,7 @@ Com esse suporte e recursos a KCAL pode se tornar uma plataforma valiosa para qu
   
  
    ## Tecnologias Utilizadas 
- </div>
+ 
 <div align="center" valign="top"><br>
   <img align="center" alt="Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
   <img align="center" alt="HTML" height="30" width="40" 
@@ -53,6 +53,16 @@ src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-ori
    <img align="center" alt="" height="30" width="40" 
 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg">
 </div>
+ 
+ ## Telas 
+ ### Landing Page 
+ ![landing page](https://github.com/matrixPUC/KCAL/assets/91105011/35126146-de0d-486c-b4a6-c7b2fef7a559)
+ ### Login 
+  
+
+
+ </div>
+ 
  
   
   
