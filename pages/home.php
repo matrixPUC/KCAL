@@ -14,6 +14,9 @@
   <title>Feed</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="../style/home.css">
+  <link rel="stylesheet" href="../style/header.css">
+  
+
 </head>
 
 <body>
