@@ -56,7 +56,8 @@ src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/b
  
  ## Telas 
  ### Landing Page 
- ![landing page](https://github.com/matrixPUC/KCAL/assets/91105011/35126146-de0d-486c-b4a6-c7b2fef7a559)
+  ![image](https://github.com/matrixPUC/KCAL/assets/91105011/cbe8b4ee-856d-4afb-ac2c-63132b7587f7)
+
  ### Login 
   
 
