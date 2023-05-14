@@ -58,7 +58,13 @@ src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/b
  ### Landing Page 
   ![image](https://github.com/matrixPUC/KCAL/assets/91105011/cbe8b4ee-856d-4afb-ac2c-63132b7587f7)
 
- ### Login 
+ ### Cadastro
+  ![image](https://github.com/matrixPUC/KCAL/assets/91105011/abec6c59-731c-435c-8b53-0a01b1a74681)
+  
+ ### Login
+  ![image](https://github.com/matrixPUC/KCAL/assets/91105011/62fca32b-fd13-4ebb-b09a-0cd38a32925b)
+
+
   
 
 
