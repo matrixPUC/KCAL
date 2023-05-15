@@ -18,7 +18,7 @@
 <header id="main-header">
     <div class="content">
         <div class="logo">
-            <img src="../assets/nutricionista.png" alt="">
+            <img src="../assets/kcal logo.png" alt="">
             <input type="text" placeholder="Pesquisar no KCal">
         </div>
         <nav class="menu-icons">

@@ -1,94 +1,103 @@
 @import url(cores.css);
 
-*{
-  padding:0;
-  margin:0;
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
-ul, li{
+ul,
+li {
   list-style: none;
 }
-body{
+
+body {
   font-family: Tahoma, Verdana, Arial, Sans-serif;
   /*background: #FFF3E2;*/
-  padding-bottom:100px;
+  padding-bottom: 100px;
 }
-button, input{
+
+button,
+input {
   outline: none;
 }
-.content{
-  margin:0 auto;
-  padding: 0 20px
+
+.content {
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-
-
-/*aisde Nav Icons */
+/* Aside Nav Icons */
 div.wrapper-content {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-div.wrapper-content aside.nav-icons{
-  width: 270px;
 
+div.wrapper-content aside.nav-icons {
+  width: 270px;
 }
-div.wrapper-content aside.nav-icons ul li{
+
+div.wrapper-content aside.nav-icons ul li {
   display: flex;
   align-items: center;
   margin: 15px 0;
 }
 
-div.wrapper-content aside.nav-icons ul li:first-child{
-  margin-top: 0
+div.wrapper-content aside.nav-icons ul li:first-child {
+  margin-top: 0;
 }
 
 div.wrapper-content aside.nav-icons ul li img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  margin-right: 10px ;
-}
-div.wrapper-content aside.nav-icons ul li span{
-  font-size: 30px;
-  color:var(--verde02);
   margin-right: 10px;
-
 }
-div.wrapper-content aside.nav-icons ul li strong{
+
+div.wrapper-content aside.nav-icons ul li span {
+  font-size: 30px;
+  color: var(--verde02);
+  margin-right: 10px;
+}
+
+div.wrapper-content aside.nav-icons ul li strong {
   font-size: 16px;
   color: var(--cinza03);
 }
-div.wrapper-content aside.nav-icons button{
+
+div.wrapper-content aside.nav-icons button {
   width: 100%;
   height: 40px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  background-color:var(--cinza06);
+  background-color: var(--cinza06);
   font-size: 15px;
   font-weight: bold;
-  color:var(--cinza03);
+  color: var(--cinza03);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-div.wrapper-content aside.nav-icons button:hover{
-  background:  var(--cinza05);
+
+div.wrapper-content aside.nav-icons button:hover {
+  background: var(--cinza05);
 }
 
-
-
-/* Section Feed*/
-div.wrapper-content section.feed{
-  width: 540px;
-  margin-right: 350px;
+/* Section Feed */
+div.wrapper-content section.feed {
+  width: 100%;
+  max-width: 540px;
+  margin-right: 0;
 }
-div.wrapper-content section.feed div.stories{
+
+div.wrapper-content section.feed div.stories {
   display: flex;
+  overflow-x: auto;
 }
 
-div.wrapper-content section.feed div.stories div{
+div.wrapper-content section.feed div.stories div {
   height: 200px;
   padding: 10px;
   width: 112px;
@@ -99,96 +108,98 @@ div.wrapper-content section.feed div.stories div{
   flex-direction: column;
   justify-content: space-between;
   background: url() no-repeat;
-  background-position:left;
+  background-position: left;
   background-size: cover;
 }
-div.wrapper-content section.feed div.stories div:last-child{
+
+div.wrapper-content section.feed div.stories div:last-child {
   margin-right: 0;
 }
 
-div.wrapper-content section.feed div.stories div img{
+div.wrapper-content section.feed div.stories div img {
   width: 35px;
   height: 35px;
   border-radius: 50%;
   border: 3px solid var(--verde02);
 }
 
-div.wrapper-content section.feed div.stories div strong{
- font-size: 15px;
- color: #fff;
+div.wrapper-content section.feed div.stories div strong {
+  font-size: 15px;
+  color: #fff;
 }
 
-
-/*Feed*/
+/* Feed */
 div.wrapper-content section.feed main ul li {
-  margin-top:20px;
+  margin-top: 20px;
   border-radius: 10px;
   background: var(--verde04);
 }
 
-div.wrapper-content section.feed main ul li div.user-info{
-  padding:15px 10px;
+div.wrapper-content section.feed main ul li div.user-info {
+  padding: 15px 10px;
 }
 
-div.wrapper-content section.feed main ul li div.user-info div{
+div.wrapper-content section.feed main ul li div.user-info div {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center
 }
 div.wrapper-content section.feed main ul li div.user-info div div {
   display: flex;
   align-items: center;
 }
-div.wrapper-content section.feed main ul li div.user-info div div div{
- display: flex;
- flex-direction: column;
- align-items: flex-start;
+
+div.wrapper-content section.feed main ul li div.user-info div div div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-div.wrapper-content section.feed main ul li div.user-info div div div strong{
+div.wrapper-content section.feed main ul li div.user-info div div div strong {
   font-size: 15px;
   color: var(--cinza01);
 }
 
-div.wrapper-content section.feed main ul li div.user-info div div div p{
+div.wrapper-content section.feed main ul li div.user-info div div div p {
   display: flex;
   align-items: center;
   color: var(--cinza01);
   font-size: 10px;
 }
 
-div.wrapper-content section.feed main ul li div.user-info div div div p span{
+div.wrapper-content section.feed main ul li div.user-info div div div p span {
   font-size: 15px;
   margin-left: 5px;
 }
-div.wrapper-content section.feed main ul li div.user-info div img{
+
+div.wrapper-content section.feed main ul li div.user-info div img {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  margin-right:8px;
+  margin-right: 8px;
 }
 
-div.wrapper-content section.feed main ul li div.user-info div span{
+div.wrapper-content section.feed main ul li div.user-info div span {
   color: var(--cinza01);
 }
-div.wrapper-content section.feed main ul li div.user-info > p{
-  margin-top: 10px ;
+
+div.wrapper-content section.feed main ul li div.user-info > p {
+  margin-top: 10px;
   color: var(--cinza01);
 }
 
 div.wrapper-content section.feed main ul li div.image-feed {
   width: 100%;
   height: 500px;
-  background:url(https://www.sabornamesa.com.br/media/k2/items/cache/668fe285e7b87ea59a0ba9aff307fa0b_XL.jpg) no-repeat;
+  background: url(https://www.sabornamesa.com.br/media/k2/items/cache/668fe285e7b87ea59a0ba9aff307fa0b_XL.jpg) no-repeat;
   background-position: center right;
-  background-size:cover ;
+  background-size: cover;
 }
 
 a {
   text-decoration: none;
   color: var(--cinza04);
 }
-
 
 div.wrapper-content section.feed main ul li div.actions-user {
   display: flex;
@@ -198,62 +209,107 @@ div.wrapper-content section.feed main ul li div.actions-user {
   width: 100%;
 }
 
-div.wrapper-content section.feed main ul li div.actions-user div{
-  color:var(--cinza01);
+div.wrapper-content section.feed main ul li div.actions-user div {
+  color: var(--cinza01);
   display: flex;
   align-items: center;
   margin-right: 50px;
   font-size: 14px;
 }
 
-div.wrapper-content section.feed main ul li div.actions-user div:last-child{
+div.wrapper-content section.feed main ul li div.actions-user div:last-child {
   margin-right: 0px;
 }
 
-div.wrapper-content section.feed main ul li div.actions-user div span{
+div.wrapper-content section.feed main ul li div.actions-user div span {
   font-size: 18px;
   margin-right: 10px;
 }
 
-
-/* Aside Contatos*/
-div.wrapper-content aside.contacts{
-  width: 306px;
-
+/* Aside Contatos */
+div.wrapper-content aside.contacts {
+  width: 100%;
+  max-width: 306px;
 }
-div.wrapper-content aside.contacts div.search{
+
+div.wrapper-content aside.contacts div.search {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-
 }
 
-div.wrapper-content aside.contacts div.search  div.icons-search span{
+div.wrapper-content aside.contacts div.search div.icons-search span {
   color: var(--cinza03);
   font-size: 25px;
   margin-left: 10px;
 }
-div.wrapper-content aside.contacts strong{
+
+div.wrapper-content aside.contacts strong {
   font-size: 16px;
   color: var(--cinza03);
 }
 
-div.wrapper-content aside.contacts ul li{
+div.wrapper-content aside.contacts ul li {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
-div.wrapper-content aside.contacts ul li img{
+
+div.wrapper-content aside.contacts ul li img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin-right: 10px;
 }
-div.wrapper-content aside.contacts ul li span{
+
+div.wrapper-content aside.contacts ul li span {
   font-weight: bold;
   font-size: 14px;
   color: var(--cinza01);
 }
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  div.wrapper-content {
+    flex-direction: column;
+  }
 
+  div.wrapper-content aside.nav-icons {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 
+  div.wrapper-content section.feed {
+    margin-right: 0;
+  }
 
+  div.wrapper-content section.feed div.stories {
+    overflow-x: auto;
+  }
+
+  div.wrapper-content section.feed div.stories div {
+    width: 80px;
+    margin-right: 6px;
+  }
+
+  div.wrapper-content aside.contacts {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  div.wrapper-content section.feed div.stories div {
+    width: 60px;
+    margin-right: 4px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  div.wrapper-content section.feed div.stories div {
+    width: 50px;
+    margin-right: 3px;
+  }
+
+  div.wrapper-content aside.contacts {
+    margin-top: 20px;
+  }
+}
