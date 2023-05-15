@@ -191,7 +191,7 @@ header .container {
   justify-content: center;
   align-items: center;
   height: 80vh; /* Defina a altura desejada */
-  background-color: orange;
+  background-color: #F0A03E;
 }
 
 .centered-image img {
