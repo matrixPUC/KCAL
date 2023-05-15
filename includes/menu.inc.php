@@ -17,8 +17,4 @@
             <span class="material-icons">group_work</span>
             <strong><a href="./calcular.php">Calcular</a></strong>
         </li>
-        <li>
-            <span class="material-icons">logout </span>
-            <strong><a href="./logout.php">LogOut</a></strong>
-        </li>
     

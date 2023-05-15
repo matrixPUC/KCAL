@@ -1,9 +1,9 @@
 <?php
     //Conexão com o banco
     $usuario = 'root';
-    $senha = 'bdPucpr2022';
+    $senha = '';
     $database = 'kcal_db';
-    $host = 'localhost:3306';
+    $host = 'localhost:3307';
 
     $mysqli = new mysqli($host, $usuario, $senha, $database);
 
