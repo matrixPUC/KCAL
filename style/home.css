@@ -1,14 +1,4 @@
-:root {
-  --cinza01: #e4e6eb;
-  --cinza02: #bec0c5;
-  --cinza03: #a7aaaf;
-  --cinza04: #808080;
-  --cinza05: #4b4d4e;
-  --cinza06: #3a3b3c;
-  --cinza07: #242526;
-  --verde01: #9fddb3;
-  --verde02: #2bff8a;
-}
+@import url(cores.css);
 
 *{
   padding:0;
@@ -133,7 +123,7 @@ div.wrapper-content section.feed div.stories div strong{
 div.wrapper-content section.feed main ul li {
   margin-top:20px;
   border-radius: 10px;
-  background: var(--cinza07);
+  background: var(--verde04);
 }
 
 div.wrapper-content section.feed main ul li div.user-info{

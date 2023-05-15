@@ -51,7 +51,7 @@ header#main-header{
     position: relative;
   }
   header#main-header div.content nav.menu-icons div:hover{
-    background: var(--cinza06);
+    background: var(--verde04);
   }
   header#main-header div.content nav.menu-icons div.home{
     height: 60px;
