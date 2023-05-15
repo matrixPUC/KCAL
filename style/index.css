@@ -191,7 +191,7 @@ header .container {
   justify-content: center;
   align-items: center;
   height: 80vh; /* Defina a altura desejada */
-  background-color: #F0A03E;
+  background-color: #8acea1;
 }
 
 .centered-image img {
@@ -263,49 +263,6 @@ header .container {
 }
 
 /* TERMINO DA SECTION */
-
-/*footer*/
-footer {
-  background-color: #f2f2f2;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.footer-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.footer-logo {
-  margin-bottom: 20px;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.footer-links a {
-  margin: 0 10px;
-  color: #333;
-  text-decoration: none;
-}
-
-.footer-social {
-  margin-bottom: 20px;
-}
-
-.footer-social a {
-  display: inline-block;
-  margin: 0 5px;
-  color: #333;
-  text-decoration: none;
-}
-
-.footer-info {
-  color: #777;
-}
 
 
 @keyframes appear {
