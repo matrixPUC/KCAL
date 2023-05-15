@@ -17,8 +17,8 @@
         <header>
           <div class="container">
             <div class="logo">
-              <img src="./assets/nutricionista.png" alt="Logo" />
-              <h3>KCAL</h3>
+              <img src="./assets/kcal logo.png" alt="Logo" />
+              
             </div>
 
             <div class="links">

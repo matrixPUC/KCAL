@@ -51,6 +51,21 @@ a {
 	margin: 15px 0;
 }
 
+.logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px; 
+  }
+  
+  .logo img {
+	width: 100px;
+	margin-right: 0.6rem;
+	margin-top: 10px;
+  }
+  
+  
+  
 button {
 	border-radius: 20px;
 	border: 1px solid var(--verde02);

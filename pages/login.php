@@ -12,8 +12,8 @@
 	<div class="container" id="container">
 		<div class="form-container log-in-container">
 			<form id="formLogin" name="formLogin" method="POST" action="./loginPHP.php">
-        <h1>KCAL</h1>
-				<div class="social-container">
+				<img src="../assets/kcal logo.png" alt="Logo" />
+			<div class="social-container">
 					<a href="#" class="social"><i class="fa fa-facebook fa-2x"></i></a>
 					<a href="#" class="social"><i class="fab fa fa-twitter fa-2x"></i></a>
           <a href="#" class="social"><i class="fab fa fa-instagram fa-2x"></i></a>

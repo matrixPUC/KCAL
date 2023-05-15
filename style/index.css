@@ -80,10 +80,11 @@ header .container {
 }
 
 .logo img {
-  width: 40px;
+  width: 100px;
   margin-right: 0.6rem;
   margin-top: -0.6rem;
 }
+
 
 
 .links ul {
