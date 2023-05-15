@@ -7,6 +7,7 @@
     <title>KCal</title>
     <link rel="icon" href="./assets/nutricionista.png" type="image/jpg">
     <link rel="stylesheet" href="./style/index.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <main>
@@ -60,7 +61,38 @@
       
       </div>
     </main>
-   
+    
+    <section class="logo-kcal">
+      <div class="centered-image">
+        <img src="./assets/kcal-fundoremovido.png" alt="Imagem" />
+      </div>
+    
+    </section>
+
+    <section class="three-items">
+        <div class="container-three-items">
+          <div class="envelope-three-items">
+            <div class="item">
+              <img src="./assets/kcal.png">
+              <h1>No KCAL</h1>
+              <p>Você cria e compartilha refeições personalizadas</p>
+            </div>
+            <div class="item">
+              <img src="./assets/world.png">
+              <h1>Conexão </h1>
+              <p>Aqui você compartilha e encontra pessoas com o mesmo propósito e objetivo que o seu!!!</p>
+            </div>
+            <div class="item">
+              <img src="./assets/calculadora.png">
+              <h1>Calculadora</h1>
+              <p>Aqui calculamos informações de consumo calórico, promovendo a sua saúde!!!</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+     
+     
 
   </body>
 </html>
