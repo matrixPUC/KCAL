@@ -15,6 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $nome_sessao ?> | KCAL</title>
     <link rel="stylesheet" href="../style/perfil.css">
+    <link rel="stylesheet" href="../style/header.css">
+
     <script src="../scripts/popup.js" defer></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -94,33 +96,73 @@
                 </ul>
     </aside>
 
-    <section class="feed">    
-      <main>
-        <ul>
-          <li>
-            <div class="user-info">
-              <div>
-                <div>
-                  <img src="./assets/pessoa.png" alt="">
-                  <div>
-                  <?php 
-                    echo '<strong><h1>' . $nome_sessao . '</h1></strong>';
-                    echo '<p>E-mail:</p>' . $email;
-                    echo '<p>Celular:</p>' . $email;
-                    echo '<p>Data de nascimento:</p>' . $email;
-                    echo '<p>Altura:</p>' . $email;
-                    echo '<p>Peso:</p>' . $email;
-                  ?>
-                
-                  </div>
-                </div>
-                
-              </div>
-            </div>
-          </li>
-        </ul>
-      </main>
-    </section>  
-    </div>
+
+	<section class="feed">    
+		<main>
+			<ul>
+				<li>
+					<div class="user-info">
+						<div>
+							<div>
+								<img src="./assets/pessoa.png" alt="">
+								<div>
+									<?php 
+									echo '<strong><h1>' . $nome_sessao . '</h1></strong>';
+									echo '<p>E-mail:</p>' . $email;
+									echo '<p>Celular:</p>' . $email;
+									echo '<p>Data de nascimento:</p>' . $email;
+									echo '<p>Altura:</p>' . $email;
+									echo '<p>Peso:</p>' . $email;
+									?>
+								</div>
+                                
+								<div class="profile-stats">
+									<ul>
+										<li><span>1.2K</span> publicações</li>
+										<li><span>3.5K</span> seguidores</li>
+										<li><span>1.8K</span> seguindo</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</main>
+		<main>
+			<div class="container">
+				<div class="gallery">
+					<div class="gallery-item">
+						<img src="../assets/post1.png" alt="Imagem 1">
+					</div>
+					<div class="gallery-item">
+						<img src="../assets/post2.jpg" alt="Imagem 2">
+					</div>
+					<div class="gallery-item">
+						<img src="../assets/post3.png" alt="Imagem 3">
+					</div>
+					<div class="gallery-item">
+						<img src="../assets/post4.jpg" alt="Imagem 4">
+					</div>
+					<div class="gallery-item">
+						<img src="../assets/post5.jpg" alt="Imagem 5">
+					</div>
+					<div class="gallery-item">
+						<img src="../assets/post6.jpg" alt="Imagem 6">
+					</div>
+					<div class="gallery-item">
+						<img src="https://via.placeholder.com/500" alt="Imagem 7">
+					</div>
+					<div class="gallery-item">
+						<img src="https://via.placeholder.com/500" alt="Imagem 8">
+					</div>
+					<div class="gallery-item">
+						<img src="https://via.placeholder.com/500" alt="Imagem 9">
+					</div>
+				</div>
+			</div>
+		</main>
+	</section>
+    
 </body>
 </html>
