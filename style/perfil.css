@@ -1,15 +1,4 @@
-:root {
-  --cinza01: #20452C;
-  --cinza02: #9FDDB3;
-  --cinza03: #a7aaaf;
-  --cinza04: #808080;
-  --cinza05: #4b4d4e;
-  --cinza06: #3a3b3c;
-  --cinza07:  #9FDDB3;
-  --verde01: #9fddb3;
-  --verde02: #2bff8a;
-}
-
+@import url(cores.css);
 *{
   padding:0;
   margin:0;
@@ -75,7 +64,7 @@ div.wrapper-content aside.nav-icons button{
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  background-color:var(--cinza06);
+  background-color:var(--verde03);
   font-size: 15px;
   font-weight: bold;
   color:var(--cinza03);
@@ -84,7 +73,7 @@ div.wrapper-content aside.nav-icons button{
   justify-content: center;
 }
 div.wrapper-content aside.nav-icons button:hover{
-  background:  var(--cinza05);
+  background:  var(--verde04);
 }
 
 
@@ -133,7 +122,7 @@ div.wrapper-content section.feed div.stories div strong{
 div.wrapper-content section.feed main ul li {
   margin-top:20px;
   border-radius: 10px;
-  background: var(--cinza07);
+  background: var(--verde04);
 }
 
 div.wrapper-content section.feed main ul li div.user-info{
@@ -355,6 +344,13 @@ div.wrapper-content section.feed main ul li div.actions-user div span{
 .icons {
   padding: 4%; 
   font-size: 25px;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
 }
 
 .button-edit {
