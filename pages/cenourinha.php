@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
+<?php include_once '../includes/header.inc.php';?>
 <head>
-    <meta charset="UTF-8">
-    <html lang="pt-br">
-	<link rel="stylesheet" href="../style/login.css">
+    	<link rel="stylesheet" href="../style/login.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Login </title>
-	<link rel="icon" href="./assets/nutricionista.png" type="image/jpg">
 </head>
 <body>
 	<div class="container" id="container">
@@ -28,7 +24,7 @@
 					//Conexão com o banco
 					include('../database/connection.php');
 				
-					if(isset($_GET['error'])){
+					if (isset($_GET['error'])){
 						$error = $_GET['error'];
 						switch($error){
 							case 1:?>
@@ -40,9 +36,8 @@
 								<?php
 								break;
 						}
-						
-					}else{?>
-						<p></p>
+					} else {?>
+					<p></p>
 					<?php
 					}
 				?>

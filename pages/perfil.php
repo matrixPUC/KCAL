@@ -10,27 +10,18 @@
 	<head>
 		<link rel="stylesheet" href="../style/perfil.css">
 		<title><?php echo $nome_sessao ?> | KCAL</title>
-		<?php include_once '../includes/menu.inc.php'; ?>
-		<li>
-			<span class="material-icons">123</span>
-			<strong><a href="./edit.php">Editar conta</a></strong>
-    	</li>
-    	<li>
-			<span class="material-icons">delete</span>
-			<form id="delete-form" method="POST" action="./deletePHP.php">
-				<strong><a href="#" onclick="openModal()">Deletar conta</a></strong>
-				<div id="delete-modal" class="modal">
-					<div class="modal-content">
-						<span class="close" onclick="closeModal()">&times;</span>
-						<p>Tem certeza que deseja excluir sua conta?</p>
-						<button type="submit">Sim</button>
-						<button type="button" onclick="closeModal()">Cancelar</button>
-					</div>
-				</div>
-			</form>
-    	</li>
-		</ul>
-	</aside>
+			<?php include_once '../includes/menu.inc.php'; ?>
+			<li>
+				<span class="material-icons">123</span>
+				<strong><a href="./edit.php">Editar conta</a></strong>
+			</li>
+			<li><?php include_once '../includes/delete.inc.php';?></li>
+			</ul>
+			<li>
+				<span class="material-icons">logout </span>
+				<strong><a href="./logout.php">LogOut</a></strong>
+			</li>
+		</aside>
 	</head>
 	<section class="feed">    
 		<main>

@@ -1,16 +1,12 @@
 <?php 
-
   include('../database/connection.php');
-
   $sql = "SELECT * FROM ingrediente";
   $result = $mysqli->query($sql);
   $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +14,6 @@
     <link rel="stylesheet" href="../style/signup.css">
     <script src="../scripts/calcular.js" defer></script>
     <title>Calcular</title>
-
 </head>
 
 <body>
@@ -43,18 +38,17 @@
       <button>Calcular</button>
 		</form>
     <?php
-					//Conexão com o banco
-					include('../database/connection.php');
-				
-					if(isset($_GET['total'])){
-						$total = $_GET['total'];
-						echo '<p>O total de calorias é: ' . $total . '</p>';
-					}else{?>
-						<p></p>
-					<?php
-					}
-				?>
+      //Conexão com o banco
+      include('../database/connection.php');
+    
+      if(isset($_GET['total'])){
+        $total = $_GET['total'];
+        echo '<p>O total de calorias é: ' . $total . '</p>';
+      }else{?>
+        <p></p>
+      <?php
+      }
+		?>
   </div>
 </body>
-
 </html> 

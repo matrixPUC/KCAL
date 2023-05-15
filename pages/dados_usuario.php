@@ -7,70 +7,26 @@
     $email = $_SESSION['email'];
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
+<?php include_once '../includes/header.inc.php';?>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $nome_sessao ?> | KCAL</title>
     <link rel="stylesheet" href="../style/perfil.css">
     <link rel="stylesheet" href="../style/header.css">
-
     <script src="../scripts/popup.js" defer></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-<body>
-    <header id="main-header">
-        <div class="content">
-            <div class="logo">
-                <img src="../assets/nutricionista.png" alt="">
-                <input type="text" placeholder="Pesquisar no KCal">
-            </div>
-            <nav class="menu-icons">
-                <div class="home">
-                    <span class="material-icons">
-                        <a href="./home.php">home</a>    
-                    </span>
-                </div>
-                <div>
-                    <span class="material-icons">ondemand_video</span>
-                </div>
-                <div>
-                    <span class="material-icons">storefront</span>
-                </div>
-                <div>
-                    <span class="material-icons">supervised_user_circle</span>
-                </div>
-                <div>
-                    <span class="material-icons">casino</span>
-                </div>
-            </nav>
-            <div class="user">
-                <div>
-                    <span><a href="./perfil.php"><?php echo $nome_sessao ?></a></span>
-                </div>
-                <nav class="actions">
-                    <div><span class="material-icons">textsms</span></div>
-                </nav>
-            </div>
-        </div>
-    </header>
     <div class="wrapper-content content">
-        <aside class="nav-icons">
-            <ul>
-                <li>
-                    <img src="<?php echo $foto ?>" alt="Foto de perfil de <?php echo $user_name ?>">
-                    <strong><a href="./perfil.php"><?php echo $nome_sessao ?></a></strong>
-                </li>
-                <li>
-                    <span class="material-icons">assistant_photo</span>
-                    <strong><a href="./receita.php">Criar Receita</a></strong>
-                </li>
-                <li>
-                    <span class="material-icons">group_work</span>
-                    <strong><a href="./calcular.php">Calcular</a></strong>
-                </li>
+        <?php 
+        include_once '../includes/menu.inc.php';
+        if ($_SESSION['adm'] == true) {
+        echo '<li>
+                <span class="material-icons">
+                    group_work
+                </span>
+                <strong><a href="./validar.php">Validar nutricionistas</a></strong>
+                </li>';
+        }
+        ?>
                 <li>
                     <span class="material-icons">123</span>
                     <strong><a href="./edit.php">Editar conta</a></strong>
@@ -87,14 +43,14 @@
                                <button type="button" onclick="closeModal()">Cancelar</button>
                              </div>
                         </div>
-                      </form>
-                  </li>
-                  <li>
-                      <span class="material-icons">logout </span>
-                   <strong><a href="./logout.php">LogOut</a></strong>
-                 </li>
+                    </form>
+                </li>
+                <li>
+                    <span class="material-icons">logout </span>
+                    <strong><a href="./logout.php">LogOut</a></strong>
+                </li>
                 </ul>
-    </aside>
+        </aside>
 
 
 	<section class="feed">    
@@ -102,31 +58,61 @@
 			<ul>
 				<li>
 					<div class="user-info">
-						<div>
-							<div>
-								<img src="./assets/pessoa.png" alt="">
-								<div>
-									<?php 
-									echo '<strong><h1>' . $nome_sessao . '</h1></strong>';
-									echo '<p>E-mail:</p>' . $email;
-									echo '<p>Celular:</p>' . $email;
-									echo '<p>Data de nascimento:</p>' . $email;
-									echo '<p>Altura:</p>' . $email;
-									echo '<p>Peso:</p>' . $email;
-									?>
-								</div>
+                        <img src="./assets/pessoa.png" alt="">
+                        <table width=500 align=center> <!--Alterar variáveis-->
+                            <tr>
+                                <td><h1><?php echo $nome_sessao ?></h1></td>
+                                <td>
                                 
-								<div class="profile-stats">
-									<ul>
-										<li><span>1.2K</span> publicações</li>
-										<li><span>3.5K</span> seguidores</li>
-										<li><span>1.8K</span> seguindo</li>
-									</ul>
-								</div>
-							</div>
-						</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h2 align="right">E-mail</h2></td>
+                                <td>
+                                    <p align="left">teste</p>
+                                    <?php echo $email ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h2 align="right">Celular</h2></td>
+                                <td>
+                                    <p align="left">teste</p>
+                                    <?php echo $celular ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h2 align="right">Data de nascimento</h2></td>
+                                <td>
+                                    <p align="left">teste</p>
+                                    <?php echo $dataNasc ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h2 align="right">Altura</h2></td>
+                                <td>
+                                    <p align="left">teste</p>
+                                    <?php echo $altura ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h2 align="right">Peso</h2></td>
+                                <td>
+                                    <p align="left">teste</p>
+                                    <?php echo $peso ?>
+                                </td>
+                            </tr>
+                        </table>
 					</div>
 				</li>
+                <li>
+                    <div class="profile-stats">
+                        <ul>
+                            <li><span>1.2K</span> publicações</li>
+                            <li><span>3.5K</span> seguidores</li>
+                            <li><span>1.8K</span> seguindo</li>
+                        </ul>
+                    </div>
+                </li>
 			</ul>
 		</main>
 		<main>
