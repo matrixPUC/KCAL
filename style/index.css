@@ -250,8 +250,62 @@ header .container {
   font-size: 20px;
 }
 
+.big-wrapper {
+  position: relative;
+  padding: 1.7rem 0 2rem;
+  width: 100%;
+  min-height: calc(100vh - 120px); /* Substitua '120px' pelo tamanho do seu footer */
+  overflow: hidden;
+  background-color: var(--backgroundColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 /* TERMINO DA SECTION */
+
+/*footer*/
+footer {
+  background-color: #f2f2f2;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-social {
+  margin-bottom: 20px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin: 0 5px;
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-info {
+  color: #777;
+}
 
 
 @keyframes appear {
