@@ -1,7 +1,7 @@
 <?php
     //Conexão com o banco
     $usuario = 'root';
-    $senha = '';
+    $senha = 'bdPucpr2022';
     $database = 'kcal_db';
     $host = 'localhost:3306';
 

@@ -48,7 +48,7 @@
             </nav>
             <div class="user">
                 <div>
-                    <span><a href="./dados_usuario.php"><?php echo $nome_sessao ?></a></span>
+                    <span><a href="./perfil.php"><?php echo $nome_sessao ?></a></span>
                 </div>
                 <nav class="actions">
                     <div><span class="material-icons">textsms</span></div>
@@ -106,8 +106,16 @@
 							<div>
 								<img src="./assets/pessoa.png" alt="">
 								<div>
-									<?php echo '<strong><h1>' . $nome_sessao . '</h1></strong><br>';?>
+									<?php 
+									echo '<strong><h1>' . $nome_sessao . '</h1></strong>';
+									echo '<p>E-mail:</p>' . $email;
+									echo '<p>Celular:</p>' . $email;
+									echo '<p>Data de nascimento:</p>' . $email;
+									echo '<p>Altura:</p>' . $email;
+									echo '<p>Peso:</p>' . $email;
+									?>
 								</div>
+                                
 								<div class="profile-stats">
 									<ul>
 										<li><span>1.2K</span> publicações</li>
@@ -122,37 +130,7 @@
 			</ul>
 		</main>
 		<main>
-			<div class="container">
-				<div class="gallery">
-					<div class="gallery-item">
-						<img src="../assets/post1.png" alt="Imagem 1">
-					</div>
-					<div class="gallery-item">
-						<img src="../assets/post2.jpg" alt="Imagem 2">
-					</div>
-					<div class="gallery-item">
-						<img src="../assets/post3.png" alt="Imagem 3">
-					</div>
-					<div class="gallery-item">
-						<img src="../assets/post4.jpg" alt="Imagem 4">
-					</div>
-					<div class="gallery-item">
-						<img src="../assets/post5.jpg" alt="Imagem 5">
-					</div>
-					<div class="gallery-item">
-						<img src="../assets/post6.jpg" alt="Imagem 6">
-					</div>
-					<div class="gallery-item">
-						<img src="https://via.placeholder.com/500" alt="Imagem 7">
-					</div>
-					<div class="gallery-item">
-						<img src="https://via.placeholder.com/500" alt="Imagem 8">
-					</div>
-					<div class="gallery-item">
-						<img src="https://via.placeholder.com/500" alt="Imagem 9">
-					</div>
-				</div>
-			</div>
+			
 		</main>
 	</section>
     
