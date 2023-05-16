@@ -87,29 +87,11 @@ div.wrapper-content aside.nav-icons button:hover {
 
 /* Section Feed */
 div.wrapper-content section.feed {
-  width: 100%;
-  max-width: 540px;
-  margin-right: 0;
-}
-
-div.wrapper-content section.feed div.stories {
-  display: flex;
-  overflow-x: auto;
-}
-
-div.wrapper-content section.feed div.stories div {
-  height: 200px;
-  padding: 10px;
-  width: 112px;
-  background: var(--cinza02);
-  border-radius: 10px;
-  margin-right: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: url() no-repeat;
-  background-position: left;
-  background-size: cover;
+    width: 100%;
+    max-width: 540px;
+    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 div.wrapper-content section.feed div.stories div:last-child {
