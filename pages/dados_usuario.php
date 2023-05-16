@@ -63,7 +63,7 @@
                         <img src="./assets/pessoa.png" alt="">
                         <table width=500 align=center> <!--Alterar variáveis-->
                             <tr>
-                                <td><h1><?php echo $nome_sessao ?></h1></td>
+                                <td><h1><?php echo $row['nome'] ?></h1></td>
                                 <td>
                                 
                                 </td>
