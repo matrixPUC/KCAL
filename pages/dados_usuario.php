@@ -3,13 +3,15 @@
     include('../database/connection.php');
 
     //ID do usuário
-    $nome_sessao = $_SESSION['nome'];
-    $email = $_SESSION['email'];
+    $IDusuario = $_SESSION['ID'];
+    $sql = "SELECT * FROM usuario WHERE ID ='$IDusuario'";
+    $result = $mysqli->query($sql);
+    $row = $result->fetch_assoc();
 ?>
 
 <?php include_once '../includes/header.inc.php';?>
 <head>
-    <title><?php echo $nome_sessao ?> | KCAL</title>
+    <title><?php echo $row['nome'] ?> | KCAL</title>
     <link rel="stylesheet" href="../style/perfil.css">
     <link rel="stylesheet" href="../style/header.css">
     <script src="../scripts/popup.js" defer></script>
@@ -69,36 +71,31 @@
                             <tr>
                                 <td><h2 align="right">E-mail</h2></td>
                                 <td>
-                                    <p align="left">teste</p>
-                                    <?php echo $email ?>
+                                    <p align="left"><?php echo $row['email'] ?></p> 
                                 </td>
                             </tr>
                             <tr>
                                 <td><h2 align="right">Celular</h2></td>
                                 <td>
-                                    <p align="left">teste</p>
-                                    <?php echo $celular ?>
+                                    <p align="left"><?php echo $row['celular'] ?></p>
                                 </td>
                             </tr>
                             <tr>
                                 <td><h2 align="right">Data de nascimento</h2></td>
                                 <td>
-                                    <p align="left">teste</p>
-                                    <?php echo $dataNasc ?>
+                                    <p align="left"><?php echo $row['dataNasc'] ?></p>
                                 </td>
                             </tr>
                             <tr>
                                 <td><h2 align="right">Altura</h2></td>
                                 <td>
-                                    <p align="left">teste</p>
-                                    <?php echo $altura ?>
+                                    <p align="left"><?php echo $row['altura'] ?></p>
                                 </td>
                             </tr>
                             <tr>
                                 <td><h2 align="right">Peso</h2></td>
                                 <td>
-                                    <p align="left">teste</p>
-                                    <?php echo $peso ?>
+                                    <p align="left"><?php echo $row['peso'] ?></p>
                                 </td>
                             </tr>
                         </table>
