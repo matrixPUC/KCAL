@@ -1,4 +1,4 @@
-<?php include_once '../includes/header.inc.php';?>
+<?php ?>
 <head>
     	<link rel="stylesheet" href="../style/login.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -8,7 +8,7 @@
 	<div class="container" id="container">
 		<div class="form-container log-in-container">
 			<form id="formLogin" name="formLogin" method="POST" action="./cenourinhaPHP.php">
-        <h1>KCAL</h1>
+			<img src="../assets/kcal logo.png" alt="Logo" />
 				<div class="social-container">
 					<a href="#" class="social"><i class="fa fa-facebook fa-2x"></i></a>
 					<a href="#" class="social"><i class="fab fa fa-twitter fa-2x"></i></a>

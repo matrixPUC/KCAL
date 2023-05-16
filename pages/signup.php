@@ -44,7 +44,7 @@
 
                     <div class="input-box">
                         <label for="phone">Celular</label>
-                        <input id="celular" type="phone" name="celular" placeholder="Digite seu celular" required pattern="^-?[0-9]+$" title="Insira um celular válido">
+                        <input id="celular" type="phone" name="celular" placeholder="41XXXXXXXXX" required pattern="^-?[0-9]+$" title="Insira um celular válido">
                     </div>
 
                     
@@ -81,7 +81,7 @@
                             <label for="nutricionista">Nutricionista</label>
                         </div>
                     <div id="campo" style="display:none;">
-                            <input type="text" id="input-box" name="crn" placeholder="CRN" pattern="^[A-Z]{2}[0-9]{5}$" title="Insira um CRN válido">
+                            <input type="text" id="input-box" name="crn" placeholder="UF12345" pattern="^[A-Z]{2}[0-9]{5}$" title="Insira um CRN válido">
                             <label for="input-campo"></label>
                             
                     </div>
