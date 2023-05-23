@@ -34,7 +34,7 @@
 
                     <div class="input-box">
                         <label for="email">E-mail</label>
-                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Deve conter um @" required>
+                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" title="Deve conter um @" required>
                     </div>
 
                     <div class="input-box">

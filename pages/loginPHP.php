@@ -24,7 +24,8 @@
                     exit();
                 } else { 
                     if ($row['validado'] == 1) {
-                        $mysqli->close();  //Encerra conexao com o BD                               
+                        $mysqli->close();  //Encerra conexao com o BD 
+                        $_SESSION['adm'] = false;                              
                         header('location: ./home.php');  // Perfil Kcaller
                         exit();
                     } else {
