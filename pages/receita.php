@@ -6,6 +6,11 @@
   $result = $mysqli->query($sql);
   $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
+  if (!$_SESSION['logado']) {
+    echo 'Você precisa estar logado para entrar nessa página';
+    return;
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +20,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/signup2.css">
+    <link rel="stylesheet" href="../style/signup.css">
     <script src="../scripts/calcular.js" defer></script>
     <title>Calcular</title>
 

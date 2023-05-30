@@ -3,6 +3,11 @@
   $sql = "SELECT * FROM ingrediente";
   $result = $mysqli->query($sql);
   $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+  if (!$_SESSION['logado']) {
+    echo 'Você precisa estar logado para entrar nessa página';
+    return;
+  }
 ?>
 
 <!DOCTYPE html>

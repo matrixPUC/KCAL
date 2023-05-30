@@ -7,6 +7,11 @@
     $sql = "SELECT * FROM usuario WHERE ID ='$IDusuario'";
     $result = $mysqli->query($sql);
     $row = $result->fetch_assoc();
+
+    if (!$_SESSION['logado']) {
+        echo 'Você precisa estar logado para entrar nessa página';
+        return;
+      }
 ?>
 
 <?php include_once '../includes/header.inc.php';?>

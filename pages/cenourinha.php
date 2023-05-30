@@ -1,4 +1,11 @@
-<?php ?>
+<?php 
+
+if ($_SESSION['logado']) {
+    echo 'Você precisa estar deslogado para entrar nessa página';
+    return;
+}
+
+?>
 <head>
     	<link rel="stylesheet" href="../style/login.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

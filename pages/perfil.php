@@ -5,6 +5,11 @@
     //ID do usuário
     $nome_sessao = $_SESSION['nome'];
     $email = $_SESSION['email'];
+
+	if (!$_SESSION['logado']) {
+		echo 'Você precisa estar logado para entrar nessa página';
+		return;
+	  }
 ?>
     <div class="wrapper-content content">
 	<head>

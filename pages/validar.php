@@ -1,3 +1,12 @@
+<?php 
+
+    if (!$_SESSION['logado']) {
+        echo 'Você precisa estar logado para entrar nessa página';
+        return;
+      }
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

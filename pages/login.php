@@ -1,3 +1,11 @@
+<?php 
+
+if ($_SESSION['logado']) {
+    echo 'Você precisa estar deslogado para entrar nessa página';
+    return;
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
