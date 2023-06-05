@@ -1,6 +1,6 @@
 <?php
 	//Conexão com o banco
-	include('../database/connection.php');
+	include_once('../database/connection.php');
     
 	$ingredients = $mysqli->real_escape_string($_POST['ingredientsInput']); // prepara a string recebida para ser utilizada em comando SQL
 

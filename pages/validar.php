@@ -1,10 +1,10 @@
 <?php 
-
+    //Conexão com o banco
+    include_once ('../database/connection.php');
     if (!$_SESSION['logado']) {
         echo 'Você precisa estar logado para entrar nessa página';
         return;
       }
-
 ?>
 
 <!DOCTYPE html>
@@ -14,21 +14,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/validar.css">
-
-    
     <title>Perfil</title>
-    
-
 </head>
     <?php include_once '../includes/header.inc.php';?>
 <body>
     <h2>Nutricionistas para serem validados:</h2>
-    
-
     <?php 
-        //Conexão com o banco
-        include('../database/connection.php');
-
         $sql = "SELECT * FROM usuario WHERE validado = 0";
         $result = $mysqli->query($sql);
         $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);

@@ -1,10 +1,10 @@
 <?php 
-
-if ($_SESSION['logado']) {
-    echo 'Você precisa estar deslogado para entrar nessa página';
-    return;
-}
-
+	//Conexão com o banco
+	include_once ('../database/connection.php');
+	if (!$_SESSION['logado']) {
+		echo 'Você precisa estar deslogado para entrar nessa página';
+		return;
+	}
 ?>
 <head>
     	<link rel="stylesheet" href="../style/login.css">
@@ -28,9 +28,6 @@ if ($_SESSION['logado']) {
 				<button>Entrar</button>
 
 				<?php
-					//Conexão com o banco
-					include('../database/connection.php');
-				
 					if (isset($_GET['error'])){
 						$error = $_GET['error'];
 						switch($error){

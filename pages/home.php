@@ -2,7 +2,6 @@
     //Conexão com o banco
     include_once('../database/connection.php');
     //ID do usuário
-    
     if (!$_SESSION['logado']) {
       echo 'Você precisa estar logado para entrar nessa página';
       return;

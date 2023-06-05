@@ -1,6 +1,6 @@
 <?php
     //Conexão com o banco
-    include('../database/connection.php');
+    include_once('../database/connection.php');
 
     //ID do usuário
     $IDusuario = $_SESSION['ID'];
@@ -66,11 +66,11 @@
 				<li>
 					<div class="user-info">
                         <img src="./assets/pessoa.png" alt="">
-                        <table width=500 align=center> <!--Alterar variáveis-->
+                        <table width=500 align=center> 
                             <tr>
                                 <td><h1><?php echo $row['nome'] ?></h1></td>
                                 <td>
-                                
+                                    <img src='./database/uploads/".$row['nome_arquivo_foto']."' alt='Foto do usuário' width='100'>
                                 </td>
                             </tr>
                             <tr>
