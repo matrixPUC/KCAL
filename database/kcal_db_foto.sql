@@ -105,7 +105,8 @@ CREATE TABLE publicacao (
     ID int(3) NOT NULL AUTO_INCREMENT,
     ID_calculo int NOT NULL,
     descricao_publicacao varchar(200) NOT NULL,
-    /* foto_receita longblob NOT NULL, */
+    /*nome_arquivo_publicacao varchar(255) NOT NULL,
+    foto_publicacao blob NOT NULL,*/
     data_publicacao varchar(50) DEFAULT NULL,
     hora_publicacao varchar(50) DEFAULT NULL,
 

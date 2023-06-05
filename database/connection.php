@@ -1,13 +1,13 @@
 <?php
     //Conexão com o banco
     $usuario = 'root';
-    $senha = 'bdPucpr2022';
-    $database = 'kcal_db_novo';
-    $host = 'localhost:3306';
+    $senha = '';
+    $database = 'kcal_db';
+    $host = 'localhost:3307';
 
     $mysqli = new mysqli($host, $usuario, $senha, $database);
 
-    if ($mysqli->error){
+    if($mysqli->error){
         die("Falha ao conectar ao banco de dados: ") . $mysqli->error;
     }
 
