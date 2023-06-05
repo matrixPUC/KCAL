@@ -16,7 +16,7 @@
             <img src="../assets/sign up.svg" alt="">
         </div>
         <div class="form">
-            <form id="formSignup" name="formSignup" method="POST" action="./signupPHP.php">
+            <form id="formSignup" name="formSignup" method="POST" action="./signupPHP.php" enctype="multipart/form-data>
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastre-se</h1>
@@ -66,6 +66,11 @@
                     <div class="input-box">
                         <label for="altura">Altura</label>
                         <input id="altura" type="text" name="altura" placeholder="cm" required pattern="^(?:(?:(?:[0-4]?\d{1,2})|500)(?:[.,]\d{1,2})?|\d{1,3})$" title="Insira uma altura em centímetros válida">
+                    </div>
+
+                    <div>
+                        <label for="foto">Foto</label>
+                        <input id="foto" type="file" name="foto" title="Insira sua foto">
                     </div>
 
                 </div>

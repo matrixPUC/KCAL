@@ -1,3 +1,7 @@
+<?php 
+	//Conexão com o banco
+	include_once('../database/connection.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,13 +28,10 @@
 				<a href="#">Esqueceu sua senha?</a>
 				<button>Entrar</button>
 
-				<?php
-					//Conexão com o banco
-					include('../database/connection.php');
-				
-					if(isset($_GET['error'])){
+				<?php	
+				if (isset($_GET['error'])) {
 						$error = $_GET['error'];
-						switch($error){
+						switch ($error) {
 							case 1:?>
 								<p>Email Nao Cadastrado</p>
 								<?php
@@ -45,7 +46,7 @@
 								break;
 						}
 						
-					}else{?>
+					} else {?>
 						<p></p>
 					<?php
 					}

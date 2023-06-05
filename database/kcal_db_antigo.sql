@@ -1,15 +1,28 @@
+
+/* TABELAS - Populando 
+    tipo_usuario *
+    usuario *
+    nutricionista *
+    ingrediente *
+    calculadora 
+    calculadora_ingrediente 
+    receita  
+    receita_ingrediente 
+    usuario_receita 
+    publicacao 
+    usuario_publicacao 
+*/
+
 CREATE DATABASE kcal_db;
 USE kcal_db;
 
-/*Criação da tabela de tipos de usuários*/
-CREATE TABLE tipo_usuario(
+CREATE TABLE tipo_usuario (
   ID int(3) NOT NULL AUTO_INCREMENT,
   tipo varchar(20) NOT NULL,
 
   PRIMARY KEY(ID)
 );
 
-/*Criação da tabela de usuários*/
 CREATE TABLE usuario (
   ID int(3) NOT NULL AUTO_INCREMENT,
   nome varchar(100) NOT NULL,
@@ -27,8 +40,7 @@ CREATE TABLE usuario (
   FOREIGN KEY(tipo_usuario) REFERENCES tipo_usuario(ID)
 ); 
 
-/*Criação da tabela de nutricionista*/
-CREATE TABLE nutricionista(
+CREATE TABLE nutricionista (
   ID_usuario int(3) NOT NULL,
   crn varchar(8) NOT NULL UNIQUE,
 
@@ -58,12 +70,10 @@ CREATE TABLE receita(
   FOREIGN KEY(ID_usuario) REFERENCES usuario(ID)
 );
 
-create table receita_ingrediente(
+CREATE TABLE receita_ingrediente(
   ID_receita int NOT NULL,
   ID_ingrediente int NOT NULL,
   quantidade FLOAT NOT NULL,
-    
-  FOREIGN KEY(ID_receita) REFERENCES receita(ID),
   FOREIGN KEY(ID_ingrediente) REFERENCES ingrediente(ID)
 );
 
@@ -75,11 +85,11 @@ INSERT INTO tipo_usuario(tipo) VALUES
 ('administrador');
 
 INSERT INTO usuario(nome, dataNasc, peso, altura, email, senha, celular, tipo_usuario, validado) VALUES
-('joao', '2023-04-23', 100.0, 190.0, 'joao@gmail.com', 'Abc123!', '41999990000', 1, 1),
-('adm😎', '2023-04-23', 100.0, 190.0, 'adm@gmail.com', 'Abc123!', '30305050', 3, 1);
-('lohine', '2000-04-23', 60.0, 160.0, 'lohine@gmail.com', 'Abc123!', '41999990000', 1, 1),
-('bruno', '2003-04-23', 90.0, 175.0, 'bruno@gmail.com', 'Abc123!', '41999990000', 2, 1),
-('beatriz', '1997-10-20', 65.0, 151.0, 'beatriz@gmail.com', 'Abc@123', '41999943781', 2, 1);
+('João', '2023-04-23', 100.0, 190.0, 'joao@gmail.com', 'Abc123!', '41999990000', 1, 1),
+('Administrador', '2023-04-23', 100.0, 190.0, 'adm@gmail.com', 'Abc123!', '30305050', 3, 1),
+('Lohine', '2000-04-23', 60.0, 160.0, 'lohine@gmail.com', 'Abc123!', '41999990000', 1, 1),
+('Bruno', '2003-04-23', 90.0, 175.0, 'bruno@gmail.com', 'Abc123!', '41999990000', 2, 1),
+('Beatriz', '1997-10-20', 65.0, 151.0, 'beatriz@gmail.com', 'Abc@123', '41999943781', 2, 1);
 
 INSERT INTO nutricionista(ID_usuario, crn) VALUES
 (3, 'PR12345'),
@@ -112,24 +122,24 @@ INSERT INTO receita(ID_usuario, nome, descricao, public, passo_a_passo) VALUES
 
 INSERT INTO receita_ingrediente(ID_receita, ID_ingrediente, quantidade) VALUES
 /*'Bolo de Cenoura com Cobertura de Chocolate'*/
-(4, 3, 0.5),
-(4, 4, 3),
-(4, 2, 4),
-(4, 5, 1.5),
-(4, 1, 3.6),
-(4, 6, 1),
-(4, 7, 1),
-(4, 8, 1),
-(4, 9, 1),
+(1, 3, 0.5),
+(1, 4, 3),
+(1, 2, 4),
+(1, 5, 1.5),
+(1, 1, 3.6),
+(1, 6, 1),
+(1, 7, 1),
+(1, 8, 1),
+(1, 9, 1),
 /*'Creme de café'*/
-(5, 10, 6),
-(5, 5, 1),
-(5, 18, 2),
+(2, 10, 6),
+(2, 5, 1),
+(2, 18, 2),
 /*'Oniguiri de Atum'*/
-(6, 11, 2),
-(6, 15, 3),
-(6, 12, 0.5),
-(6, 5, 0.6),
-(6, 17, 1),
-(6, 13, 2),
-(6, 14, 8);
+(3, 11, 2),
+(3, 15, 3),
+(3, 12, 0.5),
+(3, 5, 0.6),
+(3, 17, 1),
+(3, 13, 2),
+(3, 14, 8);

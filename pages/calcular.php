@@ -1,5 +1,6 @@
 <?php 
-  include('../database/connection.php');
+  //Conexão com o banco
+  include_once('../database/connection.php');
   $sql = "SELECT * FROM ingrediente";
   $result = $mysqli->query($sql);
   $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -43,13 +44,10 @@
       <button>Calcular</button>
 		</form>
     <?php
-      //Conexão com o banco
-      include('../database/connection.php');
-    
-      if(isset($_GET['total'])){
+      if (isset($_GET['total'])){
         $total = $_GET['total'];
         echo '<p>O total de calorias é: ' . $total . '</p>';
-      }else{?>
+      } else {?>
         <p></p>
       <?php
       }

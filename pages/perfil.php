@@ -1,6 +1,6 @@
 <?php
     //Conexão com o banco
-    include('../database/connection.php');
+    include_once('../database/connection.php');
     include_once '../includes/header.inc.php';
     //ID do usuário
     $nome_sessao = $_SESSION['nome'];

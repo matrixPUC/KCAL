@@ -1,6 +1,6 @@
 <?php 
 
-  include('../database/connection.php');
+  include_once('../database/connection.php');
 
   $sql = "SELECT * FROM ingrediente";
   $result = $mysqli->query($sql);
