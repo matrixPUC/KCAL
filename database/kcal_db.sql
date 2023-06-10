@@ -1,11 +1,10 @@
-/*CREATE DATABASE kcal_db;
-USE kcal_db;*/
+CREATE DATABASE kcal_db;
+USE kcal_db;
 
 CREATE TABLE tipo_usuario (
   ID int(3) NOT NULL AUTO_INCREMENT,
   tipo varchar(20) NOT NULL,
-
-  PRIMARY KEY(ID)
+  PRIMARY KEY (ID)
 );
 
 CREATE TABLE usuario (

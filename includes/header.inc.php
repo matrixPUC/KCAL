@@ -19,18 +19,12 @@
     <div class="content">
         <div class="logo">
             <img src="../assets/kcal logo.png" alt="">
-            <input type="text" placeholder="Pesquisar no KCal">
         </div>
         <nav class="menu-icons">
             <div class="home"><span class="material-icons"><a href="./home.php">home</a></span></div>
-            <div><span class="material-icons">ondemand_video</span></div>
-            <div><span class="material-icons">storefront</span></div>
-            <div><span class="material-icons">supervised_user_circle</span></div>
-            <div><span class="material-icons">casino</span></div>
         </nav>
         <div class="user">
             <div><span><a href="./dados_usuario.php"><?php echo $nome_sessao ?></a></span></div>
-            <nav class="actions"><div><span class="material-icons">textsms</span></div></nav>
         </div>
     </div>
 </header>

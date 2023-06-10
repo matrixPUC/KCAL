@@ -41,17 +41,27 @@
           //Loop de publicações
           if (sizeof($rows) > 0) {
             foreach ($rows as $row) {
+
+              $ID_usuario_receita = $row['ID_usuario'];
+
+              $sql = "SELECT * FROM usuario
+                      WHERE ID = '$ID_usuario_receita'";
+              $result = $mysqli->query($sql);
+              $usuarioRow = mysqli_fetch_assoc($result);
+
               echo "<li>
               <div class='user-info'>
                 <div>
                   <div>
-                    <img src='./assets/pessoa.png' alt=''>
                     <div>
-                      <strong>" . $row['ID_usuario'] . "</strong>
-                      <p>4h<span class='material-icons'>supervisor_account</span></p>
-                    </div>
-                  </div>
-                  <span class='material-icons'>more_horiz</span>
+                      <strong>" . $usuarioRow['nome'] . "</strong>
+                    </div>";
+                
+              if ($ID_usuario === $ID_usuario_receita) {
+                echo "<a href='deletar_receitaPHP.php?receita="  . $row['ID'] . "'>-Excluir</a>
+                <a href='editar_receita.php?receita="  . $row['ID'] . "'>-Editar</a>";
+              }
+                echo "</div>
                 </div>
                 <p>Nome: " . $row['nome'] . "</p><br>
                 <p>Descrição: " . $row['descricao'] . "</p><br>
@@ -71,12 +81,11 @@
 
                 $ID_ingrediente = $receitaIngrediente['ID_ingrediente'];
 
-                $sql = "SELECT * FROM ingrediente
-                  WHERE ID = '$ID_ingrediente'";
+                $sql = "SELECT * FROM ingrediente WHERE ID = '$ID_ingrediente'";
                 $result = $mysqli->query($sql);
-                $ingredienteRow = mysqli_fetch($result, MYSQLI_ASSOC);
+                $ingredienteRow = mysqli_fetch_assoc($result);
 
-                echo $ingredienteRow['nome'] + '(' + $ingredienteRow['porcao'] + ')' + $receitaIngrediente['quantidade'] + ', ';
+                echo $receitaIngrediente['quantidade'] . ' ' . $ingredienteRow['nome'] . '(' . $ingredienteRow['porcao'] . ') , ';
               }
 
               echo '</p>';
@@ -88,14 +97,6 @@
                 <div>
                   <span class='material-icons'>thumb_up</span>
                   <strong>Curtir</strong>
-                </div>
-                <div>
-                  <span class='material-icons'>chat_bubble</span>
-                  <strong>Comentar</strong>
-                </div>
-                <div>
-                  <span class='material-icons'>share</span>
-                  <strong>Compartilhar</strong>
                 </div>
               </div>
             </li>";

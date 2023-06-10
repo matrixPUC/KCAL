@@ -69,9 +69,7 @@
                         <table width=500 align=center> 
                             <tr>
                                 <td><h1><?php echo $row['nome'] ?></h1></td>
-                                <td>
-                                    <img src='./database/uploads/".$row['nome_arquivo_foto']."' alt='Foto do usuário' width='100'>
-                                </td>
+
                             </tr>
                             <tr>
                                 <td><h2 align="right">E-mail</h2></td>
@@ -107,13 +105,6 @@
 					</div>
 				</li>
                 <li>
-                    <div class="profile-stats">
-                        <ul>
-                            <li><span>1.2K</span> publicações</li>
-                            <li><span>3.5K</span> seguidores</li>
-                            <li><span>1.8K</span> seguindo</li>
-                        </ul>
-                    </div>
                 </li>
 			</ul>
 		</main>
