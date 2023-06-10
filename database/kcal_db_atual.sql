@@ -96,6 +96,26 @@ CREATE TABLE calculadora(
   FOREIGN KEY(ID_usuario) REFERENCES usuario(ID)
 );
 
+CREATE TABLE usuario_receita(
+  ID_usuario int NOT NULL,
+  ID_receita int NOT NULL,
+  liked TINYINT(1),
+  cenoura TINYINT(1),
+
+  FOREIGN KEY(ID_usuario) REFERENCES usuario(ID),
+  FOREIGN KEY(ID_receita) REFERENCES receita(ID)
+);
+
+CREATE TABLE usuario_publicacao(
+  ID_usuario int NOT NULL,
+  ID_publicacao int NOT NULL,
+  liked TINYINT(1),
+  cenoura TINYINT(1),
+
+  FOREIGN KEY(ID_usuario) REFERENCES usuario(ID),
+  FOREIGN KEY(ID_publicacao) REFERENCES publicacao(ID)
+);
+
 /*Populando as tabelas*/
 
 INSERT INTO tipo_usuario(tipo) VALUES 

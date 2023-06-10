@@ -9,7 +9,7 @@
 ?>
 <?php include_once '../includes/header.inc.php'; ?>
 <head>
-    <link rel="stylesheet" href="../style/home.css">
+    <link rel="stylesheet" href="../style/home2.css">
     <title>Feed</title>
 </head>
 <div class="wrapper-content content">
@@ -97,55 +97,131 @@
                         echo "
                                 <img src='data:$imagem_tipo;base64," . base64_encode($imagem) . "' alt='Receita Image'>
                                 <div class='actions-user'>
-                                    <div>
+                                    <div>";
+
+                        $sqlCheckLiked = "SELECT liked FROM usuario_receita WHERE ID_usuario = '$ID_usuario' AND ID_receita = '$ID_receita'";
+                        $resultLiked = $mysqli->query($sqlCheckLiked);
+
+                        $rowLiked = mysqli_fetch_assoc($resultLiked);
+                        $liked = $rowLiked['liked'];
+
+                        if ($liked === "1") {
+                          echo "<a class='liked'>Curtir</a>";
+                        } else {
+                          echo "<a href='likePHP.php?receita=" . $row['ID'] . "'>Curtir</a>";
+                        }
+                        echo "
                                         <span class='material-icons'>thumb_up</span>
-                                        <strong>Curtir</strong>
+                                        <div class='cenoura'>";
+                        $sqlCheckCenoura = "SELECT cenoura FROM usuario_receita WHERE ID_usuario = '$ID_usuario' AND ID_receita = '$ID_receita'";
+                        $resultCenoura = $mysqli->query($sqlCheckCenoura);
+
+                        $rowCenoura = mysqli_fetch_assoc($resultCenoura);
+                        $cenoura = $rowCenoura['cenoura'];
+
+                        if ($cenoura === "1") {
+                          echo "<a class='given-cenoura'>Cenoura</a>";
+                        } else {
+                          echo "<a href='cenouraPHP.php?receita=" . $row['ID'] . "'>Cenoura</a>";
+                        }
+
+                        $sqlCountLikes = "SELECT COUNT(*) as count_likes FROM usuario_receita WHERE ID_receita = '$ID_receita' AND liked = '1'";
+                        $resultCountLikes = $mysqli->query($sqlCountLikes);
+                        $rowCountLikes = mysqli_fetch_assoc($resultCountLikes);
+                        $countLikes = $rowCountLikes['count_likes'];
+
+                        $sqlCountCenouras = "SELECT COUNT(*) as count_cenouras FROM usuario_receita WHERE ID_receita = '$ID_receita' AND cenoura = '1'";
+                        $resultCountCenouras = $mysqli->query($sqlCountCenouras);
+                        $rowCountCenouras = mysqli_fetch_assoc($resultCountCenouras);
+                        $countCenouras = $rowCountCenouras['count_cenouras'];
+
+                        echo "
+                                        </div>
+                                         $countLikes curtidas e $countCenouras cenouras
                                     </div>
                                 </div>
                             </li>";
                     }
-                    $sql = "SELECT * FROM publicacao";
-          $result = $mysqli->query($sql);
-          $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
-          //Loop de publicações
-          if (sizeof($rows) > 0) {
-            foreach ($rows as $row) {
-
-              $ID_usuario_publicacao = $row['ID_usuario'];
-
-              $sql = "SELECT * FROM usuario
-                      WHERE ID = '$ID_usuario_publicacao'";
-              $result = $mysqli->query($sql);
-              $usuarioRow = mysqli_fetch_assoc($result);
-
-              echo "<li>
-              <div class='user-info'>
-                <div>
-                  <div>
-                    <div>
-                      <strong>" . $usuarioRow['nome'] . "</strong>
-                    </div>";
-                
-              if ($ID_usuario === $ID_usuario_publicacao) {
-                echo "<a href='deletar_publicacaoPHP.php?publicacao="  . $row['ID'] . "'>-Excluir</a>
-                <a href='editar_publicacao.php?publicacao="  . $row['ID'] . "'>-Editar</a>";
-              }
-                echo "</div>
-                </div>
-                <p>" . $row['texto'] . "</p><br>
-            
-              </div>
-              <div class='actions-user'>
-                <div>
-                  <span class='material-icons'>thumb_up</span>
-                  <strong>Curtir</strong>
-                </div>
-              </div>
-            </li>";
-            }
-          }
                 } else {
                     echo "Sem publicações.";
+                }
+
+                $sql = "SELECT * FROM publicacao";
+                $result = $mysqli->query($sql);
+                $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                //Loop de publicações
+                if (sizeof($rows) > 0) {
+                    foreach ($rows as $row) {
+
+                        $ID_usuario_publicacao = $row['ID_usuario'];
+
+                        $sql = "SELECT * FROM usuario WHERE ID = '$ID_usuario_publicacao'";
+                        $result = $mysqli->query($sql);
+                        $usuarioRow = mysqli_fetch_assoc($result);
+
+                        $ID_publicacao = $row['ID'];
+
+                        echo "<li>
+                                <div class='user-info'>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <strong>" . $usuarioRow['nome'] . "</strong>
+                                            </div>";
+
+                        if ($ID_usuario === $ID_usuario_publicacao) {
+                            echo "<a href='deletar_publicacaoPHP.php?publicacao="  . $ID_publicacao . "'>-Excluir</a>
+                                  <a href='editar_publicacao.php?publicacao="  . $ID_publicacao . "'>-Editar</a>";
+                        }
+                        echo "</div>
+                                </div>
+                                <p>" . $row['texto'] . "</p><br>
+                            </div>
+                            <div class='actions-user'>
+                                <div>";
+                        $sqlCheckLiked = "SELECT liked FROM usuario_publicacao WHERE ID_usuario = '$ID_usuario' AND ID_publicacao = '$ID_publicacao'";
+                        $resultLiked = $mysqli->query($sqlCheckLiked);
+                      
+                        $rowLiked = mysqli_fetch_assoc($resultLiked);
+                        $liked = $rowLiked['liked'];
+
+                        if ($liked === "1") {
+                            echo "<a class='liked'>Curtir</a>";
+                        } else {
+                            echo "<a href='likePHP.php?publicacao=" . $row['ID'] . "'>Curtir</a>";
+                        }
+                        echo "
+                                        <span class='material-icons'>thumb_up</span>
+                                        <div class='cenoura'>";
+                        $sqlCheckCenoura = "SELECT cenoura FROM usuario_publicacao WHERE ID_usuario = '$ID_usuario' AND ID_publicacao = '$ID_publicacao'";
+                        $resultCenoura = $mysqli->query($sqlCheckCenoura);
+
+                        $rowCenoura = mysqli_fetch_assoc($resultCenoura);
+                        $cenoura = $rowCenoura['cenoura'];
+
+                        if ($cenoura === "1") {
+                            echo "<a class='given-cenoura'>Cenoura</a>";
+                        } else {
+                            echo "<a href='cenouraPHP.php?publicacao=" . $row['ID'] . "'>Cenoura</a>";
+                        }
+
+                        $sqlCountLikes = "SELECT COUNT(*) as count_likes FROM usuario_receita WHERE ID_receita = '$ID_receita' AND liked = '1'";
+                        $resultCountLikes = $mysqli->query($sqlCountLikes);
+                        $rowCountLikes = mysqli_fetch_assoc($resultCountLikes);
+                        $countLikes = $rowCountLikes['count_likes'];
+
+                        $sqlCountCenouras = "SELECT COUNT(*) as count_cenouras FROM usuario_receita WHERE ID_receita = '$ID_receita' AND cenoura = '1'";
+                        $resultCountCenouras = $mysqli->query($sqlCountCenouras);
+                        $rowCountCenouras = mysqli_fetch_assoc($resultCountCenouras);
+                        $countCenouras = $rowCountCenouras['count_cenouras'];
+
+                        echo "
+                                        </div>
+                                        $countLikes curtidas e $countCenouras cenouras
+                                    </div>
+                                </div>
+                            </li>";
+                    }
                 }
                 ?>
             </ul>

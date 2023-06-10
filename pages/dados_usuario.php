@@ -2,12 +2,6 @@
     //Conexão com o banco
     include_once('../database/connection.php');
 
-    //ID do usuário
-    $IDusuario = $_SESSION['ID'];
-    $sql = "SELECT * FROM usuario WHERE ID ='$IDusuario'";
-    $result = $mysqli->query($sql);
-    $row = $result->fetch_assoc();
-
     if (!$_SESSION['logado']) {
         echo 'Você precisa estar logado para entrar nessa página';
         return;
@@ -15,6 +9,14 @@
 ?>
 
 <?php include_once '../includes/header.inc.php';?>
+
+<?php 
+
+$IDusuario = $_SESSION['ID'];
+    $sql = "SELECT * FROM usuario WHERE ID ='$IDusuario'";
+    $result = $mysqli->query($sql);
+    $row = $result->fetch_assoc();
+?>
 <head>
     <title><?php echo $row['nome'] ?> | KCAL</title>
     <link rel="stylesheet" href="../style/perfil.css">

@@ -249,6 +249,14 @@ div.wrapper-content aside.contacts ul li span {
   font-size: 14px;
   color: var(--cinza01);
 }
+
+.liked {
+  color: blue
+}
+
+.given-cenoura {
+  color: orange
+}
 /* Responsividade */
 @media screen and (max-width: 768px) {
   div.wrapper-content {
