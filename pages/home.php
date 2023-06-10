@@ -53,7 +53,35 @@
                   </div>
                   <span class='material-icons'>more_horiz</span>
                 </div>
-                <p>" . $row['nome'] . "</p>
+                <p>Nome: " . $row['nome'] . "</p><br>
+                <p>Descrição: " . $row['descricao'] . "</p><br>
+                <p>Passo a passo: " . $row['passo_a_passo'] . "</p><br>
+              ";
+
+              $ID_receita = $row['ID'];
+
+              $sql = "SELECT * FROM receita_ingrediente
+                  WHERE ID_receita = '$ID_receita'";
+              $result = $mysqli->query($sql);
+              $receitaIngredienteRows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+              echo '<p>Ingredientes: ';
+
+              foreach ($receitaIngredienteRows as $receitaIngrediente) {
+
+                $ID_ingrediente = $receitaIngrediente['ID_ingrediente'];
+
+                $sql = "SELECT * FROM ingrediente
+                  WHERE ID = '$ID_ingrediente'";
+                $result = $mysqli->query($sql);
+                $ingredienteRow = mysqli_fetch($result, MYSQLI_ASSOC);
+
+                echo $ingredienteRow['nome'] + '(' + $ingredienteRow['porcao'] + ')' + $receitaIngrediente['quantidade'] + ', ';
+              }
+
+              echo '</p>';
+
+              echo "
               </div>
               <div class='image-feed'></div>
               <div class='actions-user'>

@@ -5,6 +5,8 @@
 		echo 'Você precisa estar deslogado para entrar nessa página';
 		return;
 	}
+
+
 ?>
 <head>
     	<link rel="stylesheet" href="../style/login.css">

@@ -1,6 +1,7 @@
 <?php 
 	//Conexão com o banco
 	include_once('../database/connection.php');
+
 ?>
 <!DOCTYPE html>
 <html>

@@ -72,6 +72,16 @@ CREATE TABLE receita (
     /* foto_receita longblob NOT NULL, */
     data_receita varchar(50) DEFAULT NULL,
     hora_receita varchar(50) DEFAULT NULL,
+CREATE TABLE publicacao(
+  ID int(3) NOT NULL AUTO_INCREMENT,
+  ID_usuario int NOT NULL,
+  texto TEXT NOT NULL,
+
+  PRIMARY KEY(ID),
+  FOREIGN KEY(ID_usuario) REFERENCES usuario(ID)
+);
+
+/*Populando as tabelas*/
 
     PRIMARY KEY(ID),
     FOREIGN KEY(ID_calculo) REFERENCES calculadora(ID)
