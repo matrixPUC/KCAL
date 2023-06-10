@@ -1,7 +1,18 @@
 <?php
-    include('../database/connection.php');
-    $nome_sessao = $_SESSION['nome'];
-    $email = $_SESSION['email'];
+include('../database/connection.php');
+$nome_sessao = $_SESSION['nome'];
+$email = $_SESSION['email'];
+$ID_usuario = $_SESSION['ID'];
+
+$sqlCheckNutricionista = "SELECT tipo_usuario FROM usuario WHERE ID = '$ID_usuario'";
+$resultCheckNutricionista = $mysqli->query($sqlCheckNutricionista);
+
+if ($resultCheckNutricionista->num_rows > 0) {
+    $row = $resultCheckNutricionista->fetch_assoc();
+    if ($row['tipo_usuario'] === '2') {
+        $nome_sessao .= '🥕';
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -28,3 +39,5 @@
         </div>
     </div>
 </header>
+</body>
+</html>
