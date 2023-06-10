@@ -21,4 +21,8 @@
             <span class="material-icons">group_work</span>
             <strong><a href="./calcular.php">Calcular</a></strong>
         </li>
+        <li>
+            <span class="material-icons">assistant_photo</span>
+            <strong><a href="./historico.php">Histórico da Calculadora</a></strong>
+        </li>
     

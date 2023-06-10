@@ -24,6 +24,13 @@
     $calories = $row['calorias'] * $quantity / $row['quantidadePadrao'];
     $total += $calories;
   }
+
+  $userID = $_SESSION['ID'];
+
+  $currentDateTime = date('Y-m-d H:i:s');
+
+  $insertSql = "INSERT INTO calculadora (ID_usuario, calorias, data) VALUES ('$userID', '$total', '$currentDateTime')";
+  $mysqli->query($insertSql);
   
   header('location: ./calcular.php?total=' . $total . '');
 
