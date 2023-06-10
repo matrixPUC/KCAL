@@ -1,32 +1,45 @@
 <?php
-	//Conexão com o banco
-	include('../database/connection.php');
-    
-	$ingredients = $mysqli->real_escape_string($_POST['ingredientsInput']); // prepara a string recebida para ser utilizada em comando SQL
-    $nome = $mysqli->real_escape_string($_POST['nome']);
-    $descricao = $mysqli->real_escape_string($_POST['descricao']);
-    $passo = $mysqli->real_escape_string($_POST['passo']);
-    $publico = $mysqli->real_escape_string($_POST['publico']);
+//Conexão com o banco
+include('../database/connection.php');
 
-    $parts = explode(',', $ingredients);
-    $result = array();
-  
-    for ($i = 0; $i < count($parts); $i += 2) {
-      $result[] = array($parts[$i], (int)$parts[$i+1]);
-    }
+$ingredients = $mysqli->real_escape_string($_POST['ingredientsInput']); // prepara a string recebida para ser utilizada em comando SQL
+$nome = $mysqli->real_escape_string($_POST['nome']);
+$descricao = $mysqli->real_escape_string($_POST['descricao']);
+$passo = $mysqli->real_escape_string($_POST['passo']);
+$publico = $mysqli->real_escape_string($_POST['publico']);
 
-    if ($publico === '1') {
-        $ePublico = true;
-    } else {
-        $ePublico = false;
-    }
+$parts = explode(',', $ingredients);
+$result = array();
 
-    $ID_usuario = $_SESSION['ID'];
+var_dump($parts);
 
-    $sql = "INSERT INTO receita(ID_usuario, nome, descricao, public, passo_a_passo) 
-            VALUES ('$ID_usuario', '$nome', '$descricao' , '$ePublico', '$passo')";
+for ($i = 0; $i < count($parts); $i += 2) {
+    $result[] = array($parts[$i], (int)$parts[$i+1]);
+}
 
-    $isSucesso = $mysqli->query($sql);
+if ($publico === '1') {
+    $ePublico = true;
+} else {
+    $ePublico = false;
+}
+
+$ID_usuario = $_SESSION['ID'];
+
+// Check if an image file was uploaded
+if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
+    $image = $_FILES['imagem'];
+
+    // Get the image details
+    $image_name = $mysqli->real_escape_string($image['name']);
+    $image_type = $mysqli->real_escape_string($image['type']);
+    $image_data = file_get_contents($image['tmp_name']);
+
+    // Insert the image into the database
+    $sql = "INSERT INTO receita (ID_usuario, nome, descricao, public, passo_a_passo, imagem, imagem_tipo)
+            VALUES ('$ID_usuario', '$nome', '$descricao', '$ePublico', '$passo', ?, ?)";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param("ss", $image_data, $image_type);
+    $isSucesso = $stmt->execute();
 
     if ($isSucesso) {
         $sql = "SELECT ID FROM receita WHERE ID_usuario = '$ID_usuario' AND nome = '$nome'";
@@ -55,6 +68,5 @@
 
         header('location: ./receita.php?total=' . $total . '');
     }
-
-
-?>  
+}
+?>

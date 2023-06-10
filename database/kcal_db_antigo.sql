@@ -58,16 +58,16 @@ CREATE TABLE ingrediente(
   PRIMARY KEY(ID)
 );
 
-CREATE TABLE receita(
-  ID int(3) NOT NULL AUTO_INCREMENT,
-  ID_usuario int NOT NULL,
-  nome varchar(100) NOT NULL,
-  descricao varchar(200) NOT NULL,
-  public TINYINT(1) NOT NULL,
-  passo_a_passo TEXT NOT NULL,
-
-  PRIMARY KEY(ID),
-  FOREIGN KEY(ID_usuario) REFERENCES usuario(ID)
+CREATE TABLE receita (
+  ID INT PRIMARY KEY AUTO_INCREMENT,
+  ID_usuario INT,
+  nome VARCHAR(255),
+  descricao VARCHAR(255),
+  public BOOLEAN,
+  passo_a_passo VARCHAR(255),
+  imagem LONGBLOB,
+  imagem_tipo VARCHAR(50),
+  FOREIGN KEY (ID_usuario) REFERENCES usuario(ID)
 );
 
 CREATE TABLE receita_ingrediente(
@@ -124,10 +124,10 @@ INSERT INTO ingrediente(nome, calorias, quantidadePadrao, porcao) VALUES
 ('Água', 0, 100, 'ml'),
 ('Sal', 0, 1, 'colher');
 
-INSERT INTO receita(ID_usuario, nome, descricao, public, passo_a_passo) VALUES
-(5, 'Bolo de Cenoura com Cobertura de Chocolate', 'Bolo fofinho de cenoura com uma cobertura crocante de chocolate', 1, 'Massa: Em um liquidificador, adicione a cenoura, os ovos e o óleo, depois misture. Acrescente o açúcar e bata novamente por 5 minutos. Em uma tigela ou na batedeira, adicione a farinha de trigo e depois misture novamente. Acrescente o fermento e misture lentamente com uma colher. Asse em um forno preaquecido a 180° C por aproximadamente 40 minutos. Cobertura: Despeje em uma tigela a manteiga, o chocolate em pó, o açúcar e o leite, depois misture. Leve a mistura ao fogo e continue misturando até obter uma consistência cremosa, depois despeje a calda por cima do bolo.'),
-(5, 'Creme de café', 'Cappuccino de Colher', 1, 'Colocar na batedeira todos os ingredientes e bater por 5 a 10 minutos até formar um creme pastoso. Para beber é só utilizar uma ou duas colheres do creme em uma xícara e acrescentar leite quente. Fica uma delícia e muito cremoso. Outra opção é acrescentar uma pitada de canela e uma colher de chocolate em pó. Fica muito parecido com um cappuccino. Se preferir, pode beber gelado!'),
-(5, 'Oniguiri de Atum', 'Bolinho de arroz japonês recheado com atum', 1, 'Deixe o arroz de molho por 30 minutos, depois lave bem até a água ficar cristalina. Então coloque no fogo brando com tampa até secar e ficar bem inchado. Misture o vinagre o sal e açúcar, até dissolver bem. Coloque o arroz ainda quente em uma bacia plástica e vá despejando devagar a mistura de vinagre mexendo com movimentos rápidos com o ventilador ligado para esfriar, não deixar ficar melado. Depois de frio, pegue uma porção de arroz e abra na mão com se fosse uma panqueca. Recheie com atum e feche modelando um triângulo. Enrole na folha de nori e já está pronto!');
+INSERT INTO receita(nome, descricao, public, passo_a_passo, imagem, imagem_tipo) VALUES
+('Bolo de Cenoura com Cobertura de Chocolate', 'Bolo fofinho de cenoura com uma cobertura crocante de chocolate', 1, 'Massa: Em um liquidificador, adicione a cenoura, os ovos e o óleo, depois misture. Acrescente o açúcar e bata novamente por 5 minutos. Em uma tigela ou na batedeira, adicione a farinha de trigo e depois misture novamente. Acrescente o fermento e misture lentamente com uma colher. Asse em um forno preaquecido a 180° C por aproximadamente 40 minutos. Cobertura: Despeje em uma tigela a manteiga, o chocolate em pó, o açúcar e o leite, depois misture. Leve a mistura ao fogo e continue misturando até obter uma consistência cremosa, depois despeje a calda por cima do bolo.', 'base64_encoded_image1', 'image/jpeg'),
+('Creme de café', 'Cappuccino de Colher', 1, 'Colocar na batedeira todos os ingredientes e bater por 5 a 10 minutos até formar um creme pastoso. Para beber é só utilizar uma ou duas colheres do creme em uma xícara e acrescentar leite quente. Fica uma delícia e muito cremoso. Outra opção é acrescentar uma pitada de canela e uma colher de chocolate em pó. Fica muito parecido com um cappuccino. Se preferir, pode beber gelado!', 'base64_encoded_image2', 'image/jpeg'),
+('Oniguiri de Atum', 'Bolinho de arroz japonês recheado com atum', 1, 'Deixe o arroz de molho por 30 minutos, depois lave bem até a água ficar cristalina. Então coloque no fogo brando com tampa até secar e ficar bem inchado. Misture o vinagre o sal e açúcar, até dissolver bem. Coloque o arroz ainda quente em uma bacia plástica e vá despejando devagar a mistura de vinagre mexendo com movimentos rápidos com o ventilador ligado para esfriar, não deixar ficar melado. Depois de frio, pegue uma porção de arroz e abra na mão com se fosse uma panqueca. Recheie com atum e feche modelando um triângulo. Enrole na folha de nori e já está pronto!', 'base64_encoded_image3', 'image/jpeg');
 
 INSERT INTO receita_ingrediente(ID_receita, ID_ingrediente, quantidade) VALUES
 /*'Bolo de Cenoura com Cobertura de Chocolate'*/
