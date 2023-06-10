@@ -6,8 +6,6 @@
 
     $ID_usuario = $_SESSION['ID'];
 
-    var_dump($ID_usuario);
-
     $sql = "INSERT INTO publicacao(ID_usuario, texto) 
             VALUES ('$ID_usuario', '$texto')";
 

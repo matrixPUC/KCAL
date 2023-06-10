@@ -40,7 +40,6 @@ echo '<!DOCTYPE html>
         ?>
     </div>
 
-    <script src="../scripts/edit_receita.js" defer></script>
 </body>
 </html>';
 ?>

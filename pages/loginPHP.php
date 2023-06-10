@@ -19,31 +19,26 @@
                 $_SESSION['logado']       = 1;
                 
                 if($row['tipo_usuario'] == 3){  
-                    $mysqli->close();  //Encerra conexao com o BD
                     header('location: ./login.php?error=1');  //Nao existe cadastro com este email na base                
                     exit();
                 } else { 
                     if ($row['validado'] == 1) {
-                        $mysqli->close();  //Encerra conexao com o BD 
                         $_SESSION['adm'] = false;                              
                         header('location: ./home.php');  // Perfil Kcaller
                         exit();
                     } else {
-                        $mysqli->close();  //Encerra conexao com o BD                               
                         header('location: ./login.php?error=3');  // Perfil Kcaller
                         exit();
                     }
                 }
             }else{
                 $_SESSION['logado']  = 0;
-                $mysqli->close();  //Encerra conexao com o BD
                 header('location: ./login.php?error=2');  //Senha incorreta               
                 exit(); 
             }
             
         }else{            
             $_SESSION['logado']  = 0;
-            $mysqli->close();  //Encerra conexao com o BD
             header('location: ./login.php?error=1');  //Nao existe cadastro com este email na base                
             exit();
         }

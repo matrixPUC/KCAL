@@ -77,6 +77,15 @@ CREATE TABLE receita_ingrediente(
   FOREIGN KEY(ID_ingrediente) REFERENCES ingrediente(ID)
 );
 
+CREATE TABLE publicacao(
+  ID int(3) NOT NULL AUTO_INCREMENT,
+  ID_usuario int NOT NULL,
+  texto TEXT NOT NULL,
+
+  PRIMARY KEY(ID),
+  FOREIGN KEY(ID_usuario) REFERENCES usuario(ID)
+);
+
 /*Populando as tabelas*/
 
 INSERT INTO tipo_usuario(tipo) VALUES 

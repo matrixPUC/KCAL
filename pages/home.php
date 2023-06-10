@@ -101,6 +101,46 @@
               </div>
             </li>";
             }
+            $sql = "SELECT * FROM publicacao";
+          $result = $mysqli->query($sql);
+          $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+          //Loop de publicações
+          if (sizeof($rows) > 0) {
+            foreach ($rows as $row) {
+
+              $ID_usuario_publicacao = $row['ID_usuario'];
+
+              $sql = "SELECT * FROM usuario
+                      WHERE ID = '$ID_usuario_publicacao'";
+              $result = $mysqli->query($sql);
+              $usuarioRow = mysqli_fetch_assoc($result);
+
+              echo "<li>
+              <div class='user-info'>
+                <div>
+                  <div>
+                    <div>
+                      <strong>" . $usuarioRow['nome'] . "</strong>
+                    </div>";
+                
+              if ($ID_usuario === $ID_usuario_publicacao) {
+                echo "<a href='deletar_publicacaoPHP.php?publicacao="  . $row['ID'] . "'>-Excluir</a>
+                <a href='editar_publicacao.php?publicacao="  . $row['ID'] . "'>-Editar</a>";
+              }
+                echo "</div>
+                </div>
+                <p>" . $row['texto'] . "</p><br>
+            
+              </div>
+              <div class='actions-user'>
+                <div>
+                  <span class='material-icons'>thumb_up</span>
+                  <strong>Curtir</strong>
+                </div>
+              </div>
+            </li>";
+            }
+          }
           } else {
             echo "Sem publicações.";
           }

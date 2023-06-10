@@ -25,7 +25,7 @@
 <body>
   <div class="flex-column recipe-div">
     <form id="formReceita" name="formReceita" method="POST" action="./publicacaoPHP.php">
-        <input type="text" name="text" required  placeholder="Texto"/>
+        <input type="text" name="texto" required  placeholder="Texto"/>
         <button>Criar</button>
     </form>
   </div>
