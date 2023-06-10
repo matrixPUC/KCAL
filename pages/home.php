@@ -9,7 +9,7 @@
 ?>
 <?php include_once '../includes/header.inc.php'; ?>
 <head>
-    <link rel="stylesheet" href="../style/home2.css">
+    <link rel="stylesheet" href="../style/home.css">
     <title>Feed</title>
 </head>
 <div class="wrapper-content content">
