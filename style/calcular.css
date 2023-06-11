@@ -1,0 +1,49 @@
+/* Arquivo signup.css */
+
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+  }
+  
+  .flex-column {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .flex-column label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .flex-column select,
+  .flex-column input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+  }
+  
+  .flex-column .add-btn,
+  .flex-column button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .flex-column p {
+    margin-top: 10px;
+  }
+  
+  /* Estilo para o input hidden */
+  .flex-column input.hidden {
+    display: none;
+  }
+  

@@ -1,5 +1,9 @@
 <?php
 include_once('../database/connection.php');
+include_once ('../includes/header.inc.php');
+include_once ('../includes/menu.inc.php');
+
+
 
 $sql = "SELECT * FROM ingrediente";
 $result = $mysqli->query($sql);
@@ -13,11 +17,14 @@ if (!$_SESSION['logado']) {
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/signup.css">
+    <link rel="stylesheet" href="../style/receita.css">
+
     <script src="../scripts/calcular.js" defer></script>
     <title>Calcular</title>
 </head>
@@ -46,12 +53,13 @@ if (!$_SESSION['logado']) {
             <br><br><br>
             <input type="file" name="imagem" accept="image/*" required>
             <br><br>
-            <button>Criar</button>
+            <button>Adicionar</button>
         </form>
-        <button class="add-btn">Adicionar</button>
+        <button class="add-btn">Criar</button>
         <?php
         //Conexão com o banco
         include('../database/connection.php');
+        
 
         if (isset($_GET['total'])) {
             $total = $_GET['total'];

@@ -1,0 +1,78 @@
+
+
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+  }
+  .btn {
+    display: inline-block;
+    padding: 0.9rem 1.9rem;
+    color: #fff !important;
+    background-color: var(--mainColor);
+    border-radius: 16px;
+    text-transform: capitalize;
+    transition: 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: var(--hoverColor);
+    transform: scale(1) !important;
+  }
+  
+  
+  .recipe-div {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .recipe-div input[type="text"],
+  .recipe-div input[type="checkbox"],
+  .recipe-div select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+  }
+  
+  .recipe-div input[type="file"] {
+    margin-top: 10px;
+  }
+  
+  .recipe-div label {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  
+  .recipe-div button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .recipe-div button.add-btn {
+    background-color: #008000;
+  }
+  
+  .recipe-div h3.ingredients {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-div p {
+    margin-top: 10px;
+  }
+  
+  /* Estilo para o input hidden */
+  .recipe-div input.hidden {
+    display: none;
+  }
+  
