@@ -14,7 +14,7 @@
 <head>
     <link rel="stylesheet" href="../style/receita.css">
     <script src="../scripts/calcular.js" defer></script>
-    <title>Calcular</title>
+    <title>Receita</title>
 </head>
 <?php 
     include_once '../includes/menu.inc.php';
