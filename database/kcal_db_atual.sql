@@ -1,18 +1,4 @@
 
-/* TABELAS - Populando 
-    tipo_usuario *
-    usuario *
-    nutricionista *
-    ingrediente *
-    calculadora 
-    calculadora_ingrediente 
-    receita  
-    receita_ingrediente 
-    usuario_receita 
-    publicacao 
-    usuario_publicacao 
-*/
-
 CREATE DATABASE kcal_db;
 USE kcal_db;
 
@@ -113,7 +99,7 @@ CREATE TABLE usuario_publicacao(
   cenoura TINYINT(1),
 
   FOREIGN KEY(ID_usuario) REFERENCES usuario(ID),
-  FOREIGN KEY(ID_publicacao) REFERENCES publica(ID)
+  FOREIGN KEY(ID_publicacao) REFERENCES publicacao(ID)
 );
 
 /*Populando as tabelas*/

@@ -1,0 +1,52 @@
+/* Aside Nav Icons */
+  aside.nav-icons {
+    width: 30%; /* Largura do aside */
+    float: left; /* Flutua o aside à esquerda */
+  }
+  
+  aside.nav-icons ul li {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+  }
+  
+  aside.nav-icons ul li:first-child {
+    margin-top: 0;
+  }
+  
+  aside.nav-icons ul li img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  aside.nav-icons ul li span {
+    font-size: 30px;
+    color: var(--verde02);
+    margin-right: 10px;
+  }
+  
+  aside.nav-icons ul li strong {
+    font-size: 16px;
+    color: var(--cinza03);
+  }
+  
+  aside.nav-icons button {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--cinza06);
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--cinza03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  aside.nav-icons button:hover {
+    background: var(--cinza05);
+  }
