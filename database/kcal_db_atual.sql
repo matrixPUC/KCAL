@@ -113,7 +113,7 @@ CREATE TABLE usuario_publicacao(
   cenoura TINYINT(1),
 
   FOREIGN KEY(ID_usuario) REFERENCES usuario(ID),
-  FOREIGN KEY(ID_publicacao) REFERENCES publicacao(ID)
+  FOREIGN KEY(ID_publicacao) REFERENCES publica(ID)
 );
 
 /*Populando as tabelas*/
