@@ -3,6 +3,9 @@
     $nome_sessao = $_SESSION['nome'];
     $email = $_SESSION['email'];
 ?>
+<head>
+    <link rel="stylesheet" href="../style/menu.css">
+</head>
 <aside class="nav-icons">
     <ul>
         <li>

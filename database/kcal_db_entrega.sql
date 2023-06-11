@@ -4,7 +4,8 @@ USE kcal_db;
 CREATE TABLE tipo_usuario (
   ID int(3) NOT NULL AUTO_INCREMENT,
   tipo varchar(20) NOT NULL,
-  PRIMARY KEY (ID)
+
+  PRIMARY KEY(ID)
 );
 
 CREATE TABLE usuario (
@@ -18,7 +19,8 @@ CREATE TABLE usuario (
   celular varchar(20) NOT NULL,
   tipo_usuario int(3) NOT NULL,
   validado TINYINT(1) NOT NULL,
-  /*foto_usuario longblob NOT NULL,*/
+  nome_arquivo_foto varchar(255) NOT NULL,
+  foto_usuario blob NOT NULL,
 
   PRIMARY KEY(ID),
   FOREIGN KEY(tipo_usuario) REFERENCES tipo_usuario(ID)
@@ -71,16 +73,6 @@ CREATE TABLE receita (
     /* foto_receita longblob NOT NULL, */
     data_receita varchar(50) DEFAULT NULL,
     hora_receita varchar(50) DEFAULT NULL,
-CREATE TABLE publicacao(
-  ID int(3) NOT NULL AUTO_INCREMENT,
-  ID_usuario int NOT NULL,
-  texto TEXT NOT NULL,
-
-  PRIMARY KEY(ID),
-  FOREIGN KEY(ID_usuario) REFERENCES usuario(ID)
-);
-
-/*Populando as tabelas*/
 
     PRIMARY KEY(ID),
     FOREIGN KEY(ID_calculo) REFERENCES calculadora(ID)
@@ -140,13 +132,13 @@ INSERT INTO tipo_usuario (tipo) VALUES
 ('nutricionista'),
 ('administrador');
 
-INSERT INTO usuario (nome, dataNasc, peso, altura, email, senha, celular, tipo_usuario, validado) VALUES
-('João', '2023-04-23', 100.0, 190.0, 'joao@gmail.com', 'Abc123!', '41999990000', 1, 1),
-('Administrador', '2023-04-23', 100.0, 190.0, 'adm@gmail.com', 'Abc123!', '30305050', 3, 1),
-('Lohine', '2000-04-23', 60.0, 160.0, 'lohine@gmail.com', 'Abc123!', '41999990000', 1, 1),
-('Bruno', '2003-04-23', 90.0, 175.0, 'bruno@gmail.com', 'Abc123!', '41999990000', 2, 1),
-('Beatriz', '1997-10-20', 65.0, 151.0, 'beatriz@gmail.com', 'Abc@123', '41999943781', 2, 1);
-('João Vitor', '2002-10-20', 60.0, 170.0, 'jvitor@gmail.com', 'Abc123!', '41999945432', 2, 0);
+INSERT INTO usuario (nome, dataNasc, peso, altura, email, senha, celular, tipo_usuario, validado, nome_arquivo_foto, foto_usuario) VALUES
+('João', '2023-04-23', 100.0, 190.0, 'joao@gmail.com', 'Abc123!', '41999990000', 1, 1, 'foto_joao.jpeg', LOAD_FILE('./database/uploads/foto_joao.jpg')),
+('Administrador', '2023-04-23', 100.0, 190.0, 'adm@gmail.com', 'Abc123!', '30305050', 3, 1, 'foto_adm.png', LOAD_FILE('./database/uploads/foto_adm.jpg')),
+('Lohine', '2000-04-23', 60.0, 160.0, 'lohine@gmail.com', 'Abc123!', '41999990000', 1, 1, 'foto_lohine.jpeg', LOAD_FILE('./database/uploads/foto_lohine.jpg')),
+('Bruno', '2003-04-23', 90.0, 175.0, 'bruno@gmail.com', 'Abc123!', '41999990000', 2, 1, 'foto_bruno.jpeg', LOAD_FILE('./database/uploads/foto_bruno.jpg')),
+('Beatriz', '1997-10-20', 65.0, 151.0, 'beatriz@gmail.com', 'Abc@123', '41999943781', 2, 1, 'foto_beatriz.jpeg', LOAD_FILE('./database/uploads/foto_beatriz.jpeg')),
+('João Vitor', '2002-10-20', 60.0, 170.0, 'jvitor@gmail.com', 'Abc123!', '41999945432', 2, 0, 'foto_jvitor.jpeg', LOAD_FILE('./database/uploads/foto_jvitor.jpg'));
 
 INSERT INTO nutricionista (ID_usuario, crn) VALUES
 (3, 'PR12345'),
