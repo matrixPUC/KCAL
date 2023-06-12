@@ -3,6 +3,7 @@
 	include('../database/connection.php');
     
   $nome = $mysqli->real_escape_string($_POST['nome']); // prepara a string recebida para ser utilizada em comando SQL
+  $username = $mysqli->real_escape_string($_POST['username']); // prepara a string recebida para ser utilizada em comando SQL
 	$email = $mysqli->real_escape_string($_POST['email']); // prepara a string recebida para ser utilizada em comando SQL
   $senha = $mysqli->real_escape_string($_POST['senha']); // prepara a string recebida para ser utilizada em comando SQL
   $confirmarSenha = $mysqli->real_escape_string($_POST['confirmar-senha']); // prepara a string recebida para ser utilizada em comando SQL
