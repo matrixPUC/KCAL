@@ -1,5 +1,8 @@
 <?php
 include_once('../database/connection.php');
+include_once '../includes/header.inc.php';
+
+
 
 $ID_publicacao = $_GET['publicacao'];
 
@@ -19,7 +22,7 @@ echo '
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/signup.css">
+    <link rel="stylesheet" href="../style/editarpubli.css">
     <script src="../scripts/calcular.js" defer></script>
     <title>Editar Publicação</title>
 </head>
@@ -32,6 +35,7 @@ echo '
         </form>
         <?php
         include("../database/connection.php");
+        
         ?>
     </div>
 </body>

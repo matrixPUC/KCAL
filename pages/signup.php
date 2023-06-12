@@ -33,6 +33,7 @@
                         <label for="nome">Nome Completo </label>
                         <input id="nome" type="text" name="nome" placeholder="Digite seu nome completo" required>
                     </div>
+                    
 
                     <div class="input-box">
                         <label for="email">E-mail</label>

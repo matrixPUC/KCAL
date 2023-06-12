@@ -52,7 +52,7 @@ CREATE TABLE calculadora (
 );
 
 CREATE TABLE calculadora_ingrediente (
-    ID int(3) NOT NULL AUTO_INCREMENT,
+    ID int(3) NOT NULL AUTO_I NCREMENT,
     ID_calculo int NOT NULL,
     ID_ingrediente int NOT NULL,
     quantidade float,
