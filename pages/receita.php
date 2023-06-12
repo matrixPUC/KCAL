@@ -53,9 +53,9 @@
             <br><br><br>
             <input type="file" name="imagem" accept="image/*" required>
             <br><br>
-            <button>Adicionar</button>
+            <button>Criar</button>
         </form>
-        <button class="add-btn">Criar</button>
+        <button class="add-btn">Adicionar</button>
         <?php
         //Conexão com o banco
         include('../database/connection.php');

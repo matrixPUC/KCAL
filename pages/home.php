@@ -205,12 +205,12 @@
                             echo "<a href='cenouraPHP.php?publicacao=" . $row['ID'] . "'>Cenoura</a>";
                         }
 
-                        $sqlCountLikes = "SELECT COUNT(*) as count_likes FROM usuario_receita WHERE ID_receita = '$ID_receita' AND liked = '1'";
+                        $sqlCountLikes = "SELECT COUNT(*) as count_likes FROM usuario_publicacao WHERE ID_publicacao = '$ID_publicacao' AND liked = '1'";
                         $resultCountLikes = $mysqli->query($sqlCountLikes);
                         $rowCountLikes = mysqli_fetch_assoc($resultCountLikes);
                         $countLikes = $rowCountLikes['count_likes'];
 
-                        $sqlCountCenouras = "SELECT COUNT(*) as count_cenouras FROM usuario_receita WHERE ID_receita = '$ID_receita' AND cenoura = '1'";
+                        $sqlCountCenouras = "SELECT COUNT(*) as count_cenouras FROM usuario_publicacao WHERE ID_publicacao = '$ID_publicacao' AND cenoura = '1'";
                         $resultCountCenouras = $mysqli->query($sqlCountCenouras);
                         $rowCountCenouras = mysqli_fetch_assoc($resultCountCenouras);
                         $countCenouras = $rowCountCenouras['count_cenouras'];
