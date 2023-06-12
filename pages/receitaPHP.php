@@ -11,7 +11,10 @@ $publico = $mysqli->real_escape_string($_POST['publico']);
 $parts = explode(',', $ingredients);
 $result = array();
 
-var_dump($parts);
+if (count($parts) < 4) {
+    echo 'Uma receita precisa ter pelo menos 2 ingredientes';
+    return;
+}
 
 for ($i = 0; $i < count($parts); $i += 2) {
     $result[] = array($parts[$i], (int)$parts[$i+1]);

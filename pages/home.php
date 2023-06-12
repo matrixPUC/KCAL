@@ -47,12 +47,22 @@
                         $result = $mysqli->query($sql);
                         $usuarioRow = mysqli_fetch_assoc($result);
 
+                        $nomeUsuario = $usuarioRow['nome'];
+
+                        $sql = "SELECT * FROM nutricionista WHERE ID_usuario = '$ID_usuario_receita'";
+                        $result = $mysqli->query($sql);
+                        $nutricionistaRow = mysqli_fetch_assoc($result);
+
+                        if ($nutricionistaRow) {
+                            $nomeUsuario .= "🥕";
+                        }
+
                         echo "<li>
                                 <div class='user-info'>
                                     <div>
                                         <div>
                                             <div>
-                                                <strong>" . $usuarioRow['nome'] . "</strong>
+                                                <strong>" . $nomeUsuario . "</strong>
                                             </div>";
 
                         if ($ID_usuario === $ID_usuario_receita) {
@@ -159,6 +169,16 @@
                         $result = $mysqli->query($sql);
                         $usuarioRow = mysqli_fetch_assoc($result);
 
+                        $nomeUsuario = $usuarioRow['nome'];
+
+                        $sql = "SELECT * FROM nutricionista WHERE ID_usuario = '$ID_usuario_publicacao'";
+                        $result = $mysqli->query($sql);
+                        $nutricionistaRow = mysqli_fetch_assoc($result);
+
+                        if ($nutricionistaRow) {
+                            $nomeUsuario .= "🥕";
+                        }
+
                         $ID_publicacao = $row['ID'];
 
                         echo "<li>
@@ -166,7 +186,7 @@
                                     <div>
                                         <div>
                                             <div>
-                                                <strong>" . $usuarioRow['nome'] . "</strong>
+                                                <strong>" . $nomeUsuario . "</strong>
                                             </div>";
 
                         if ($ID_usuario === $ID_usuario_publicacao) {

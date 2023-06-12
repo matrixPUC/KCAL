@@ -53,9 +53,11 @@
             <br><br><br>
             <input type="file" name="imagem" accept="image/*" required>
             <br><br>
-            <button>Criar</button>
+            <button>Criar Receita</button>
         </form>
-        <button class="add-btn">Adicionar</button>
+        <button class="add-btn">Adicionar Ingrediete</button>
+        <br>
+        <button><a href="./home.php">Cancelar</a></button>
         <?php
         //Conexão com o banco
         include('../database/connection.php');

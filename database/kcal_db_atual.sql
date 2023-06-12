@@ -117,8 +117,8 @@ INSERT INTO usuario(nome, dataNasc, peso, altura, email, senha, celular, tipo_us
 ('Beatriz', '1997-10-20', 65.0, 151.0, 'beatriz@gmail.com', 'Abc@123', '41999943781', 2, 1);
 
 INSERT INTO nutricionista(ID_usuario, crn) VALUES
-(3, 'PR12345'),
-(4, 'PR66633');
+(4, 'PR12345'),
+(5, 'PR66633');
 
 INSERT INTO ingrediente(nome, calorias, quantidadePadrao, porcao) VALUES 
 ('Farinha', 364, 100, 'gramas'),
