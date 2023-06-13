@@ -13,6 +13,7 @@
   $usuario = $mysqli->real_escape_string($_POST['usuario']); // prepara a string recebida para ser utilizada em comando SQL
   $celular = $mysqli->real_escape_string($_POST['celular']); // prepara a string recebida para ser utilizada em comando SQL
   $crn = $mysqli->real_escape_string($_POST['crn']); // prepara a string recebida para ser utilizada em comando SQL
+  $instagram = $mysqli->real_escape_string($_POST['instagram']); // prepara a string recebida para ser utilizada em comando SQL
 
   $anoNascimento = intval(substr($nascimento, 0, 4));
 
@@ -56,7 +57,7 @@
             $row = $result->fetch_assoc();
             $IDusuario = $row['ID'];
             
-            $sql = "INSERT INTO nutricionista(ID_usuario, crn) VALUES ('$IDusuario', '$crn')";
+            $sql = "INSERT INTO nutricionista(ID_usuario, crn, instagram) VALUES ('$IDusuario', '$crn', '$instagram')";
             if ($mysqli->query($sql) === TRUE) {
               header('location: ./login.php');
               return;

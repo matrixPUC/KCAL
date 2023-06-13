@@ -79,15 +79,25 @@
                     </div>
 
                     <div class="usuario-group">
-                        <div class="usuario-input">
-                            <input id="nutricionista" type="radio" name="usuario" value="2" onclick="mostrarCampo()">
-                            <label for="nutricionista">Nutricionista</label>
-                        </div>
-                    <div id="campo" style="display:none;">
-                            <input type="text" id="input-box" name="crn" placeholder="UF12345" pattern="^[A-Z]{2}[0-9]{5}$" title="Insira um CRN válido">
-                            <label for="input-campo"></label>
-                            
-                    </div>
+                    <div class="usuario-inputs">
+    <div class="usuario-title">
+        <h6>Usuário</h6>
+    </div>
+
+    <div class="usuario-group">
+        <div class="usuario-input">
+            <input id="nutricionista" type="radio" name="usuario" value="2" onclick="mostrarCampo()">
+            <label for="nutricionista">Nutricionista</label>
+        </div>
+
+        <div id="campo-crn" class="campo" style="display:none;">
+            <input type="text" id="input-crn" name="crn" placeholder="UF12345" pattern="^[A-Z]{2}[0-9]{5}$" title="Insira um CRN válido">
+            <label for="input-crn"></label>
+            
+            <input type="text" id="input-instagram" name="instagram" placeholder="Digite seu username do Instagram">
+            <label for="input-instagram"></label>
+        </div>
+
 
                         <div class="usuario-input">
                             <input id="male" type="radio" name="usuario" value="1" onclick="ocultarCampo()" checked>

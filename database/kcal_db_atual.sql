@@ -29,6 +29,7 @@ CREATE TABLE usuario (
 CREATE TABLE nutricionista (
   ID_usuario int(3) NOT NULL,
   crn varchar(8) NOT NULL UNIQUE,
+  instagram varchar (100) NOT NULL UNIQUE,
 
   PRIMARY KEY(ID_usuario),
   FOREIGN KEY(ID_usuario) REFERENCES usuario(ID)
