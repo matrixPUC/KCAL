@@ -11,7 +11,7 @@
 ?>
 <?php include_once '../includes/header.inc.php'; ?>
 <head>
-    <link rel="stylesheet" href="#">
+    
     <title>Histórico Calculadora</title>
 </head>
 <?php 

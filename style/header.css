@@ -1,10 +1,12 @@
 /* Main Header */
+@import url(cores.css);
 header#main-header{
     color: var(--cinza03);
     height: 60px;
     background: var(--verde01);
     border-bottom: 1px solid  var(--verde02); 
     margin-bottom: 20px;
+    font-family: Tahoma, Verdana, Arial, Sans-serif;
   } 
   
   header#main-header div.content{
@@ -181,5 +183,10 @@ header#main-header{
   header#main-header div.content div.user nav.actions div span{
   font-size: 16px;
   }
+  a {
+    text-decoration: none;
+    color: var(--cinza04);
   }
+  }
+  
   
