@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../style/publicacao.css">
     <title>Publicação</title>
 </head>
+
 <?php 
     include_once '../includes/menu.inc.php';
     if ($_SESSION['adm'] == true) {
@@ -31,6 +32,7 @@
         <button>Criar</button>
     </form>
   </div>
+
 </body>
 
 </html> 

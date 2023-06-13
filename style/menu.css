@@ -1,7 +1,9 @@
 /* Aside Nav Icons */
+@import url(cores.css);
   aside.nav-icons {
     width: 30%; /* Largura do aside */
     float: left; /* Flutua o aside à esquerda */
+    font-family: Tahoma, Verdana, Arial, Sans-serif;
   }
   
   aside.nav-icons ul li {
@@ -49,4 +51,9 @@
   
   aside.nav-icons button:hover {
     background: var(--cinza05);
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--cinza04);
   }

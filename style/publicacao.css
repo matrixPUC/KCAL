@@ -1,8 +1,9 @@
 /* Arquivo style.css */
+@import url(cores.css);
 
 body {
     background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
+    font-family: Tahoma, Verdana, Arial, Sans-serif;
   }
   
   .flex-column {
