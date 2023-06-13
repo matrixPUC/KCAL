@@ -18,6 +18,7 @@ CREATE TABLE usuario (
   email varchar(100) NOT NULL,
   senha varchar(255) NOT NULL,
   celular varchar(20) NOT NULL,
+  genero varchar (20) NOT NULL, 
   tipo_usuario int(3) NOT NULL,
   validado TINYINT(1) NOT NULL,
   /*foto longblob NOT NULL,*/

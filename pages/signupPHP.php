@@ -12,6 +12,7 @@
   $altura = $mysqli->real_escape_string($_POST['altura']); // prepara a string recebida para ser utilizada em comando SQL
   $usuario = $mysqli->real_escape_string($_POST['usuario']); // prepara a string recebida para ser utilizada em comando SQL
   $celular = $mysqli->real_escape_string($_POST['celular']); // prepara a string recebida para ser utilizada em comando SQL
+  $genero = $mysqli->real_escape_string($_POST['genero']); // prepara a string recebida para ser utilizada em comando SQL
   $crn = $mysqli->real_escape_string($_POST['crn']); // prepara a string recebida para ser utilizada em comando SQL
 
   $anoNascimento = intval(substr($nascimento, 0, 4));
@@ -35,7 +36,7 @@
   }
 
   if ($usuario == 1) {
-    $sql = "INSERT INTO usuario(nome, dataNasc, peso, altura, email, senha, celular, tipo_usuario, validado) VALUES('$nome', '$nascimento', '$peso', '$altura', '$email', '$senha', '$celular', 1, 1)";
+    $sql = "INSERT INTO usuario(nome, dataNasc, peso, altura, email, senha, celular, genero, tipo_usuario, validado) VALUES('$nome', '$nascimento', '$peso', '$altura', '$email', '$senha', '$genero','$celular', 1, 1)";
 
     if ($mysqli->query($sql) === TRUE) {
       header('location: ./login.php');
@@ -46,7 +47,7 @@
     }
 
   } else if ($usuario == 2) {
-    $sql = "INSERT INTO usuario(nome, dataNasc, peso, altura, email, senha, celular, tipo_usuario, validado) VALUES('$nome', '$nascimento', '$peso', '$altura', '$email', '$senha', '$celular', 2, 0)";
+    $sql = "INSERT INTO usuario(nome, dataNasc, peso, altura, email, senha, celular, genero, tipo_usuario, validado) VALUES('$nome', '$nascimento', '$peso', '$altura', '$email', '$senha','$genero', '$celular', 2, 0)";
 
     if ($mysqli->query($sql) === TRUE) {
       $sql = "SELECT * FROM usuario WHERE email = '$email'";

@@ -50,6 +50,11 @@
                         <input id="celular" type="phone" name="celular" placeholder="41XXXXXXXXX" required pattern="^-?[0-9]+$" title="Insira um celular válido">
                     </div>
 
+                    <div class="input-box">
+                        <label for="genero">Genero</label>
+                        <input id="genero" type="text" name="genero" required>
+                    </div>
+
                     
                     <div class="input-box">
                         <label for="senha">Senha</label>

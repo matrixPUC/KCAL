@@ -86,6 +86,12 @@ $IDusuario = $_SESSION['ID'];
                                 </td>
                             </tr>
                             <tr>
+                                <td><h2 align="right">Genero</h2></td>
+                                <td>
+                                    <p align="left"><?php echo $row['genero'] ?></p>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td><h2 align="right">Data de nascimento</h2></td>
                                 <td>
                                     <p align="left"><?php echo $row['dataNasc'] ?></p>
